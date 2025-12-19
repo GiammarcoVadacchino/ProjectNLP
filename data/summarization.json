@@ -1,0 +1,3245 @@
+{
+    "Contributors": [
+        "Arpit Prajapati"
+    ],
+    "Source": [
+        "sentence_compression"
+    ],
+    "URL": [
+        "https://github.com/google-research-datasets/sentence-compression"
+    ],
+    "Categories": [
+        "Summarization"
+    ],
+    "Reasoning": [],
+    "Definition": [
+        "In this task, you are given a piece of an article. Your task is to generate a short summary of the text. Try to give the summary in just one sentence."
+    ],
+    "Input_language": [
+        "English"
+    ],
+    "Output_language": [
+        "English"
+    ],
+    "Instruction_language": [
+        "English"
+    ],
+    "Domains": [
+        "News"
+    ],
+    "Positive Examples": [
+        {
+            "input": "Prime Minister Gordon Brown said Monday he had discussed the car industry crisis with German Chancellor Angela Merkel but had not talked about any specific amount of aid for General Motors.",
+            "output": "Gordon Brown had discussed the car industry crisis with Angela Merkel.",
+            "explanation": "This summary is appropriate for the given article text as the article is about Gordon Brown and Angela Merkel's talk on car industry crisis."
+        },
+        {
+            "input": "Police have denied fears that emergency response times will increase due to a forthcoming restructure.",
+            "output": "Police have denied fears response times will increase.",
+            "explanation": "This article's focus is on Police and fears on increased emergency response times and the summary entails these topics and so it is appropriate."
+        },
+        {
+            "input": "Andrzej Fonfara defeated Glen Johnson with a unanimous decision victory, which was enough to convince Johnson that he should retire from the sport of boxing.",
+            "output": "Andrzej Fonfara defeated Glen Johnson.",
+            "explanation": "This article's focus is on fight between Andrzej Fonfara and Glen Johnson and the summary talks about Andrzej Fonfara defeating Glen Johnson. So, it's not appropriate."
+        },
+        {
+            "input": "England manager Fabio Capello is refusing to get carried away with thoughts of qualifying for the 2010 World Cup finals despite watching his side record a fourth successive victory.",
+            "output": "Fabio Capello is refusing to get carried away.",
+            "explanation": "This article's focus is on England manager Fabio Capello about qualifying for 2010 World Cup finals, and the summary also talks about Fabio Capello refusing to get carried."
+        }
+    ],
+    "Negative Examples": [
+        {
+            "input": "A former Gulf Breeze Police officer is being arrested this morning on sexual battery and unlawful compensation charges, according to Gulf Breeze Deputy Chief of Police Robert Randle.",
+            "output": "An Abilene teenager was killed early Sunday in a wreck.",
+            "explanation": "Summary and article text are totally different. Hence, this is not a correct summary."
+        },
+        {
+            "input": "An Abilene teenager was killed early Sunday in a one-car wreck just east of Chapman.",
+            "output": "Sulieman Benn bowled a marathon, spell.",
+            "explanation": "This article talks about An Abilene teenager was killed early Sunday in a wreck, and the summary is about Sulieman Benn. Hence this is not a right summary."
+        },
+        {
+            "input": "West Indies spinner Sulieman Benn bowled a marathon, uninterrupted spell of 33 overs on the first day of the first Test against England on Wednesday to dispel many of the question marks over his ability.",
+            "output": "The screenings identify for stroke vascular disease, and osteoporosis.",
+            "explanation": "This article talks about West Indies spinner Sulieman Benn and summary is about a screening identifies a disease. So, the summary is wrong."
+        }
+    ],
+    "Instances": [
+        {
+            "id": "task1355-62da9b8f3b114d50bc64a7123de73766",
+            "input": "The Bombay high court on Tuesday directed the BEST staff, including drivers and conductors, to call off their strike and report to work immediately.",
+            "output": [
+                "The Bombay high court directed the BEST staff to call off their strike and report to work."
+            ]
+        },
+        {
+            "id": "task1355-93a42cfeda20423ba16b629706660035",
+            "input": "A 40-mile section of Highway 12 over White Pass was closed by a mud and rock slide Saturday, and crews will need to inspect the area in the daylight Sunday before estimating when the roadway will reopen.",
+            "output": [
+                "A section of Highway 12 over White Pass was closed by a slide."
+            ]
+        },
+        {
+            "id": "task1355-7c5ddae9e74e439aae056c99697161d0",
+            "input": "THREE-TIME champions Germany, Belgium and Switzerland reached the World Cup finals on Friday as England, Russia and Bosnia-Herzegovina edged closer to Brazil.",
+            "output": [
+                "Germany, Belgium and Switzerland reached the World Cup finals."
+            ]
+        },
+        {
+            "id": "task1355-eb3ca62de88d4d15a7b9684aa4af3d99",
+            "input": "Seven Austrian neo-Nazis were sentenced to up to six years in prison in a case the judge said should serve as an example to others in the country.",
+            "output": [
+                "Seven neo-Nazis were sentenced to up to six years in prison."
+            ]
+        },
+        {
+            "id": "task1355-3082a9d43e584bbd8a2fd7e1edc0b881",
+            "input": "Pakistan said on Thursday it has decided to resume cross-border trade in Kashmir after weeks of suspension over the arrest of a Pakistani driver by the Indian authorities on drugs smuggling charges.",
+            "output": [
+                "Pakistan has decided to resume cross-border trade in Kashmir."
+            ]
+        },
+        {
+            "id": "task1355-40ef79c56b2849f3bace712b3067e55e",
+            "input": "ALLIANCE-The Salem baseball team made a late comeback bid but fell short to Alliance 7-5 Wednesday.",
+            "output": [
+                "Salem team made a comeback bid but fell short to Alliance 7."
+            ]
+        },
+        {
+            "id": "task1355-2d9216a94b9a40ed9c57b1b5d38dc354",
+            "input": "Spain Friday strongly condemned the mortar attack against the Russian embassy in Damascus which killed one Syrian and injured nine others.",
+            "output": [
+                "Spain Friday condemned the mortar attack against the Russian embassy in Damascus."
+            ]
+        },
+        {
+            "id": "task1355-5827a71e96ce40f0a13e688c62a5db80",
+            "input": "Syrian dissident writer and journalist Akram Al Bunni has been arrested by security forces, his brother, a prominent rights lawyer, told AFP on Sunday.",
+            "output": [
+                "Syrian dissident writer has been arrested."
+            ]
+        },
+        {
+            "id": "task1355-f235af5031b94d1c98b42f8f373f2e39",
+            "input": "A research project has found that taxi drivers often don't know what the speed limit is.",
+            "output": [
+                "Taxi drivers don't know the speed limit is."
+            ]
+        },
+        {
+            "id": "task1355-034d40945e6945608d88f22f2a875695",
+            "input": "This year the Venezuelan government plans to continue its pace of land expropriations in order to move towards what it terms ``agrarian socialism''.",
+            "output": [
+                "The Venezuelan government plans to continue its pace of land expropriations in order to move towards agrarian socialism."
+            ]
+        },
+        {
+            "id": "task1355-1b1a2c56727d47fc8aea17d795c11edb",
+            "input": "OG&E is warning customers about a prepaid debit card scam that is targeting utility customers across the country.",
+            "output": [
+                "OG&E is warning customers about a scam."
+            ]
+        },
+        {
+            "id": "task1355-1a9a51c6e0ea4dca8a9d37cbeac2832e",
+            "input": "US whistleblower Bradley Manning, charged with releasing over 700,000 battlefield reports from Iraq and Afghanistan to Wikileaks, received a sentence of 35 years in prison from a military court Wednesday.",
+            "output": [
+                "Bradley Manning received a sentence of 35 years in prison."
+            ]
+        },
+        {
+            "id": "task1355-0b17ee11f6704befa385d425690a878f",
+            "input": "Sharmila Joshi of sharmilajoshi.com feels that Ballarpur Industries may touch Rs 21-22 in next 9-12 months.",
+            "output": [
+                "Ballarpur Industries may touch Rs 21 22."
+            ]
+        },
+        {
+            "id": "task1355-d1dcd1a24d99449ba7e7bb672f83c852",
+            "input": "Governor-elect Terry McAuliffe is bringing pre-inauguration celebrations to southwest Virginia Saturday night with a regional inaugural ball in Abingdon.",
+            "output": [
+                "Terry McAuliffe is bringing pre-inauguration celebrations Saturday night."
+            ]
+        },
+        {
+            "id": "task1355-6886c5f9d2b54a78b643a768859d2652",
+            "input": "The second wild is the picture of all five of the Girls people roulette online chat Guns.",
+            "output": [
+                "People roulette online chat Guns."
+            ]
+        },
+        {
+            "id": "task1355-f7a75b17bc9946449367188b5f7d0aae",
+            "input": "Gareth Bale has conceded that he enjoys the 'expectation' on his shoulders at Real Madrid.",
+            "output": [
+                "Gareth Bale enjoys the expectation."
+            ]
+        },
+        {
+            "id": "task1355-040aee0a42434264a58116b4f19c3ade",
+            "input": "But one state lawmaker says some costumes contain toxic chemicals and she wants those toxins identified and labeled.",
+            "output": [
+                "Some costumes contain toxic chemicals."
+            ]
+        },
+        {
+            "id": "task1355-f5e5d9c2989246fe84623f453a1627b9",
+            "input": "A 48-year-old Golden Valley man was arrested Friday after child porn was found on his computer.",
+            "output": [
+                "A man was arrested after child porn was found on his computer."
+            ]
+        },
+        {
+            "id": "task1355-116561b748df4294bc49d83aeb06ee2a",
+            "input": "Beaver-based Heritage Valley Health System plans to advertise rates for the top 25 medical services at its ConvenientCare outpatient clinics, the first effort of its kind in western Pennsylvania.",
+            "output": [
+                "Heritage Valley Health System plans to advertise rates at its outpatient clinics."
+            ]
+        },
+        {
+            "id": "task1355-f56421e2d4464150b2c126018d0f2e2f",
+            "input": "Hundreds of men and women marched for ``freedom'' in the Sudanese capital today despite the deployment of militia, troops and riot police, AFP correspondents reported.",
+            "output": [
+                "Hundreds marched for freedom in the Sudanese capital."
+            ]
+        },
+        {
+            "id": "task1355-6e10ef1732a443a586136432f9caf4b4",
+            "input": "Exercise may be just as good as medication to treat heart disease and should be included as a comparison when new drugs are being developed and tested, scientists said on Wednesday.",
+            "output": [
+                "Exercise may be good as medication to treat heart disease."
+            ]
+        },
+        {
+            "id": "task1355-1865aa01bc2340a2bad4f613b803a844",
+            "input": "Nine IT stocks were up 0.27% to 2.98% at 09:57 IST on BSE, extending Friday's gain triggered by Infosys raising its revenue growth guidance in both rupee and dollar terms for the year ending 31 March 2014.",
+            "output": [
+                "Nine IT stocks were, extending Friday's gain."
+            ]
+        },
+        {
+            "id": "task1355-6300cc3f33504a379535800e877202bf",
+            "input": "World leaders from across the globe come together to pay tribute to Nelson Mandela, who died last week at the age of 95.",
+            "output": [
+                "World leaders come to pay tribute to Nelson Mandela."
+            ]
+        },
+        {
+            "id": "task1355-d0dbb2885e534930bdf469a5fdf56f7a",
+            "input": "Redbox rented its 3 billionth disc this month, just 16 months after renting its 2 billionth disc in March 2012.",
+            "output": [
+                "Redbox rented its 3 billionth disc."
+            ]
+        },
+        {
+            "id": "task1355-417b5d3b65e14a83b1dbe3c66e13f3a5",
+            "input": "Broadway's original Dreamgirl Jennifer Holliday is coming to the Atlanta Botanical Garden for a concert benefiting Actor's Express.",
+            "output": [
+                "Broadway's Jennifer Holliday is coming to the Atlanta Botanical Garden."
+            ]
+        },
+        {
+            "id": "task1355-16d20703f97645e9845f46a725205e4b",
+            "input": "Court records show a University of Dayton basketball player has been charged with domestic violence and assault.",
+            "output": [
+                "A University of Dayton basketball player has been charged with violence and assault."
+            ]
+        },
+        {
+            "id": "task1355-c8f9918729644773b545142816cc1e08",
+            "input": "Silver Standard Resources Inc. announces today that it has entered into a Purchase and Sale Agreement with subsidiaries of Goldcorp Inc. and Barrick Gold Corporation to purchase 100% of the Marigold mine, a producing gold mine in Nevada, USA for cash consideration of $275 million.",
+            "output": [
+                "Silver Standard Resources Inc. has entered to purchase 100% of the Marigold mine."
+            ]
+        },
+        {
+            "id": "task1355-7b721a49d8a740d49c2f0d47fb04dc57",
+            "input": "The moment Secretary of State John Kerry and President Obama began making speeches instead of launching missiles, the attack on Syria had already failed.",
+            "output": [
+                "The attack on Syria had already failed."
+            ]
+        },
+        {
+            "id": "task1355-99f6d224f944405b9a74a0d48d690a0d",
+            "input": "The Flint master plan team will begin forming implementation task groups to coordinate and implement the strategies developed in Imagine Flint Master Plan.",
+            "output": [
+                "The master plan team will begin forming implementation task groups."
+            ]
+        },
+        {
+            "id": "task1355-f40659d8a66d4736a233b6bef013f281",
+            "input": "Italy on Tuesday recalled its ambassador from India in protest over a new delay in the legal proceedings against two Italian marines accused of killing two Indian fishermen.",
+            "output": [
+                "Italy recalled its ambassador from India."
+            ]
+        },
+        {
+            "id": "task1355-0427700d28fc4114966954e628f10d59",
+            "input": "Japanese veteran Kimiko Date-Krumm was forced to retire in the first round of the BMW Malaysian Open in Kuala Lampur on Tuesday.",
+            "output": [
+                "Kimiko Date-Krumm was forced to retire in the first round of the BMW Malaysian Open."
+            ]
+        },
+        {
+            "id": "task1355-097259c2c1ff41c7b331328b59b35f17",
+            "input": "The husband of murdered Melbourne woman Jill Meagher will return to Ireland later this month ``to clear his head'' while fighting for parole board changes.",
+            "output": [
+                "The husband of murdered woman Jill Meagher will return to Ireland."
+            ]
+        },
+        {
+            "id": "task1355-68ac6c2e5a7144898fdbfd036c0dc74a",
+            "input": "Boaters can become frustrated when a repair or upgrade takes a long time, but delays are often a simple result of supply and demand.",
+            "output": [
+                "A repair takes, but delays are often a simple result of supply and demand."
+            ]
+        },
+        {
+            "id": "task1355-4d86f99292534e3f9a9dae70c88c728f",
+            "input": "It's been officially confirmed that NASCAR Sprint Cup team owner Gene Haas has been granted a Formula One license by the FIA.",
+            "output": [
+                "Gene Haas has been granted a Formula One license by the FIA."
+            ]
+        },
+        {
+            "id": "task1355-a499069cac8a48309c3692ffc4cf14fa",
+            "input": "An Indiana priest who gained fame when he performed exorcisms on a local family has signed a movie deal that will tell the story on screen.",
+            "output": [
+                "An priest who gained he performed exorcisms has signed a movie deal."
+            ]
+        },
+        {
+            "id": "task1355-930f0bf198744b35a14a36cad2bbd78f",
+            "input": "24 veterans will receive the Medal of Honor next month, decades after completing their military service.",
+            "output": [
+                "24 veterans will receive the Medal of Honor, decades after completing their service."
+            ]
+        },
+        {
+            "id": "task1355-ff44333eaba84441956d29bb92451d5e",
+            "input": "You and your family can get in on the action this weekend at Midtown Global Market in Minneapolis, where they're hosting the Mexican celebration Dia de los Muertos, or Day of the Dead.",
+            "output": [
+                "Midtown Global Market they 're hosting the celebration Dia de los Muertos."
+            ]
+        },
+        {
+            "id": "task1355-f57fd0a71365437396462823c7ff5f0d",
+            "input": "Stillman College will furlough employees in April and May as a way to avoid pay cuts or layoffs, according to a statement released Wednesday.",
+            "output": [
+                "Stillman College will furlough employees in April and May."
+            ]
+        },
+        {
+            "id": "task1355-d0be0e915b6141f88965d31936ebac5a",
+            "input": "With the pace of drug overdose deaths on the rise in the Twin Cities, Democratic US Sen. Amy Klobuchar will host an event Sunday at the Hazelden's youth addiction treatment center in Plymouth to highlight efforts to combat heroin use in the state.",
+            "output": [
+                "Amy Klobuchar will host to highlight efforts to combat heroin use."
+            ]
+        },
+        {
+            "id": "task1355-89082475fe2441deaf05ed674b4955b8",
+            "input": "Chris Hemsworth and the crew of his new movie 'In the Heart of the Sea' were forced to flee flash floods in the Canary Islands yesterday.",
+            "output": [
+                "Chris Hemsworth were forced to flee floods."
+            ]
+        },
+        {
+            "id": "task1355-f11f915fdaef400c88cb35858de0c31f",
+            "input": "Tinnitus Miracle created by Thomas Coleman is a new revolutionary treatment for ringing in the ears that teaches people how to alleviate, even eliminate tinnitus efficiently.",
+            "output": [
+                "Miracle is a treatment for ringing in the ears."
+            ]
+        },
+        {
+            "id": "task1355-088d0e98fe2445bdb0d53f193d7532a5",
+            "input": "Adrian Beltre could return to the Texas Rangers' lineup as soon as Sunday after feeling tightness in his left quadriceps muscle during a late game Thursday night, and left-hander Matt Harrison is on schedule to make his Cactus League debut Monday night.",
+            "output": [
+                "Adrian Beltre could return soon as Sunday."
+            ]
+        },
+        {
+            "id": "task1355-52c54331f0a3486f8c633f2d6a807036",
+            "input": "No. 5 Hartselle defeated Athens 14-6 in a key region game at JP Cain Stadium Friday night.",
+            "output": [
+                "Hartselle defeated Athens 14."
+            ]
+        },
+        {
+            "id": "task1355-a48c5be14bdf40338729bda0c4819a07",
+            "input": "BJP MLA from Tharad and party's general secretary Shankar Chaudhary along with 50 others was acquitted on Saturday in a 2002 riots case, in which two people lost their lives in firing and public and private properties were damaged in Radhanpur town.",
+            "output": [
+                "MLA and Shankar Chaudhary along with 50 others was acquitted in a 2002 riots case."
+            ]
+        },
+        {
+            "id": "task1355-019783f7946b41559967293e90bebfbf",
+            "input": "Mayors from cities across Kansas urge members of Congress to pass comprehensive immigration reform.",
+            "output": [
+                "Mayors urge members of Congress to pass immigration reform."
+            ]
+        },
+        {
+            "id": "task1355-00934ff699c84dc491433b9aff2cd78a",
+            "input": "In an audacious incident, kin of a rape accused today tried to chop off the teenage victim's tongue in Pratapgarh district in order to prevent her from giving her statement in the court.",
+            "output": [
+                "Kin of a rape accused today tried to chop off the teenage victim's tongue."
+            ]
+        },
+        {
+            "id": "task1355-f067e150e0334108889081543c70689a",
+            "input": "Two soldiers were wounded Friday night in north Lebanon while trying to reopen a road blocked by protesters seeking the release of a ``wanted man.''",
+            "output": [
+                "Two soldiers were wounded in north Lebanon."
+            ]
+        },
+        {
+            "id": "task1355-6c0290797deb4d56b1854d2f1fc3c6b3",
+            "input": "Early childhood education is vital to your child's development.",
+            "output": [
+                "Early education is vital."
+            ]
+        },
+        {
+            "id": "task1355-f7b87c0d547f4578af8a7b3ee3006dfd",
+            "input": "MICROSOFT Philippines is rolling out Office 365, its latest product that aims to boost productivity of schools and small and medium businesses.",
+            "output": [
+                "Office 365 aims to boost productivity."
+            ]
+        },
+        {
+            "id": "task1355-266eabeb5b3d4d898dfcc718fb169ebd",
+            "input": "Mike Trout left the Angels game in the sixth inning today with tightness in his right hamstring, but he isn't worried about it being a long-term injury.",
+            "output": [
+                "Mike Trout left the game with tightness in his right hamstring, but he isn't."
+            ]
+        },
+        {
+            "id": "task1355-c5c46e19a0444999bf0d2995a9ad6c6a",
+            "input": "The Kudankulam nuclear reactor will start generating 1000 MW of power by October end, Union Minister V Narayanasamy on Friday said.",
+            "output": [
+                "The Kudankulam reactor will start generating 1000 MW by October end, said."
+            ]
+        },
+        {
+            "id": "task1355-64280d3b4f8e436f972fb0ab9b8401c3",
+            "input": "Today in Latin American history, Paraguay fought against Brazil, Uruguay, & Argentina at the Battle of Curupayty in 1866.",
+            "output": [
+                "Paraguay fought against Brazil, Uruguay, & Argentina at the Battle of Curupayty in 1866."
+            ]
+        },
+        {
+            "id": "task1355-6ea4b73e77d74aec8708548f48cd08aa",
+            "input": "Tourists spent $541 million more on activities, eating out, accommodation and shopping in the year to March than in the previous year, Statistics New Zealand says.",
+            "output": [
+                "Tourists spent $ more."
+            ]
+        },
+        {
+            "id": "task1355-98184a15c3c243dfac16a10a0ccb3471",
+            "input": "About 200 pigs died and 100 had to be gathered when a semi overturned in Cass County on Wednesday, the Pharos-Tribune, reports.",
+            "output": [
+                "About 200 pigs died and 100 had when a semi overturned."
+            ]
+        },
+        {
+            "id": "task1355-7a6e6dd1ab2849ec8131be05be7e60ed",
+            "input": "More Americans now believe the United States has become a less important and less powerful player on the world stage.",
+            "output": [
+                "More Americans believe the United States has become a less important player."
+            ]
+        },
+        {
+            "id": "task1355-9c2f52c7c5264b1da1268af33b940438",
+            "input": "Police in Deltona, Fla., are trying to sniff out the identity of a man who allegedly attempted to pay his water bill with cocaine.",
+            "output": [
+                "Who attempted to pay his water bill with cocaine."
+            ]
+        },
+        {
+            "id": "task1355-5ac73789bf1c41b8a2f25eeb6e422e64",
+            "input": "In response to a question from NDP Treasury Board critic, Mathieu Ravignat on Tuesday, Clement told the House of Commons Tuesday that contracting out government services reduces costs.",
+            "output": [
+                "Clement told contracting out government services reduces."
+            ]
+        },
+        {
+            "id": "task1355-4c0601c708fe448b91fa565fcf7d1315",
+            "input": "Several domestic flights were cancelled Sunday due to the bad weather brought by the low pressure area near Mindanao.",
+            "output": [
+                "Several domestic flights were cancelled due to the bad weather."
+            ]
+        },
+        {
+            "id": "task1355-b4890420ef784c1f8f0789971de7d2ec",
+            "input": "Insurance regulator IRDA on Monday prescribed a standard format for life and non-life insurance policy to improve transparency and help people take informed decisions.",
+            "output": [
+                "IRDA prescribed a standard format for life and insurance policy."
+            ]
+        },
+        {
+            "id": "task1355-dc2d450283564d86a4e7ebc00bb87608",
+            "input": "An empty tanker caught fire Wednesday night in a garage along W.Va.",
+            "output": [
+                "An tanker caught fire in a garage."
+            ]
+        },
+        {
+            "id": "task1355-dedfe78256e64478ba4814f834e6f3c8",
+            "input": "TRADE and Industry Minister Rob Davies defended the government's economic record in Parliament on Tuesday, saying it had implemented structural reforms and countercyclical infrastructure projects to help shore up the economy.",
+            "output": [
+                "TRADE and Rob Davies defended the government's economic record."
+            ]
+        },
+        {
+            "id": "task1355-4ba552721b1140b8b9e9748fe355ee89",
+            "input": "Facebook, on Thursday, agreed to buy mobile messaging service WhatsApp for $19 billion, making it the company's largest acquisition.",
+            "output": [
+                "Facebook agreed to buy WhatsApp for $ 19 billion."
+            ]
+        },
+        {
+            "id": "task1355-691f697404504efb9a7f34b3168d988a",
+            "input": "The National Bank of Ukraine is not mulling the introduction of restrictions against banks operating in Crimea, NBU Governor Stepan Kubiv has said.",
+            "output": [
+                "The National Bank of Ukraine is not mulling the introduction of restrictions against banks operating in Crimea."
+            ]
+        },
+        {
+            "id": "task1355-28665b9dadc84d928ede06f68398e61a",
+            "input": "ALLEN PARK ó Detroit coach Jim Schwartz liked the play of his special teams in the Lions first preseason game.",
+            "output": [
+                "Detroit coach Jim Schwartz liked the play of his special teams."
+            ]
+        },
+        {
+            "id": "task1355-99867e88cdc64dee87edf1e2a87656a1",
+            "input": "A new lieutenant was introduced and two deputies who helped save a man's life were honored Monday at the Bell County Jail.",
+            "output": [
+                "A new lieutenant was introduced and two deputies were honored."
+            ]
+        },
+        {
+            "id": "task1355-b812f4c322b2459393c77590e5e6c531",
+            "input": "Soul singer ROBIN THICKE and his actress wife PAULA PATTON have separated after almost nine years of marriage.",
+            "output": [
+                "ROBIN THICKE and PAULA PATTON have separated."
+            ]
+        },
+        {
+            "id": "task1355-fb4c453894c24b5b90e246db34be4e61",
+            "input": "Portland Timbers coach Caleb Porter has signed a contract extension with the Timbers, according to confirmed reports.",
+            "output": [
+                "Coach Caleb Porter has signed a contract extension with the Timbers."
+            ]
+        },
+        {
+            "id": "task1355-27d648381dfb481bb7200a0dfb38ce38",
+            "input": "Around 60 people are protesting in front of the building of the Bulgarian parliament in the capital city Sofia, FOCUS News Agency reporter informed.",
+            "output": [
+                "Around 60 people are protesting in front of the building of the Bulgarian parliament."
+            ]
+        },
+        {
+            "id": "task1355-90fdd7b2395d47ca8ae022c880f04232",
+            "input": "YSR Congress chief Jaganmohan Reddy on Tuesday walked out of the Chanchalguda jail after spending 16 months in prison.",
+            "output": [
+                "Jaganmohan Reddy walked out of the jail after spending 16 months."
+            ]
+        },
+        {
+            "id": "task1355-5a3fa7f3280a46ee9d60d74d429228f0",
+            "input": "Twilight star Kellan Lutz won't be very merry this Christmas because there have been too many family deaths in the past 12 months to really celebrate the season.",
+            "output": [
+                "Kellan Lutz won't be very merry this Christmas."
+            ]
+        },
+        {
+            "id": "task1355-daa1515484dc4014b9045652d99b8c0d",
+            "input": "Today Sony introduced the world's first curved screen LED television, model KDL-65S990A.",
+            "output": [
+                "Sony introduced the world's first curved screen LED television."
+            ]
+        },
+        {
+            "id": "task1355-a91579230a0a49eba6737a3d68020a0b",
+            "input": "US President Barack Obama shakes hands with Cuban President Raul Castro as Brazilian President Dilma Rouseff looks on at centre at the FNB Stadium in Soweto, South Africa, in the rain for a memorial service for former South African President Nelson Mandela today.",
+            "output": [
+                "Barack Obama shakes hands with Raul Castro."
+            ]
+        },
+        {
+            "id": "task1355-85acbf1a44f9486cb93967607f8070f2",
+            "input": "Social activist Medha Patkar on Monday extended her ``complete'' support to Arvind Kejriwal-led Aam Aadmi Party in Maharashtra.",
+            "output": [
+                "Medha Patkar extended her support to Aam Aadmi Party."
+            ]
+        },
+        {
+            "id": "task1355-810a727172c2490c858701338edef2e2",
+            "input": "The National Weather Service has issued a frost advisory for Alabama covering a swath of central Alabama.",
+            "output": [
+                "The National Weather Service has issued a frost advisory covering a swath of central Alabama."
+            ]
+        },
+        {
+            "id": "task1355-323cf9d14a1f42178f8ad657f964b334",
+            "input": "Saint Mary's College has announced plans to renovate McKeon Pavilion and build a new performance center for its student athletes.",
+            "output": [
+                "Saint Mary's College has announced plans to renovate McKeon Pavilion."
+            ]
+        },
+        {
+            "id": "task1355-c2c1abc1d37749dea983cdd012e83352",
+            "input": "State Sen. Stewart Greenleaf discusses his proposed human trafficking bill at Calvery Baptist Church in Willow Grove Thursday night.",
+            "output": [
+                "State Sen. Stewart Greenleaf discusses his proposed human trafficking bill."
+            ]
+        },
+        {
+            "id": "task1355-2e7e7196cd294e2b976f8ab877e3047b",
+            "input": "Cirque du Soleil performers returned to their roots today by taking to the streets in Santa Monica to showcase acrobatic feats and colorful costumes in a free performance.",
+            "output": [
+                "Cirque du Soleil performers returned by taking to the streets in Santa Monica."
+            ]
+        },
+        {
+            "id": "task1355-3ffa6682d40e4dd08db35804c9fd131a",
+            "input": "A federal appeals court ordered YouTube to take down a controversial anti-Islam video in an unusual copyright decision that Google, which owns YouTube, said raised questions about freedom of speech.",
+            "output": [
+                "A federal court ordered YouTube to take down a controversial anti-Islam video."
+            ]
+        },
+        {
+            "id": "task1355-c5575f0fa536433997580ff3992019cf",
+            "input": "Alan Turing, known as the father of computer science, the codebreaker that helped win World War 2, and the man tortured by the state for being gay, is to receive a pardon nearly 60 years after his death.",
+            "output": [
+                "Alan Turing is to receive a pardon nearly 60 years after his death."
+            ]
+        },
+        {
+            "id": "task1355-1d9feb40b2bb44119111730608b5f69f",
+            "input": "A 40-year-old woman accused of stabbing her 58-year-old husband in the chest during an argument in a North Park alley was on the run, police said Tuesday.",
+            "output": [
+                "A woman accused of stabbing her husband in the chest was."
+            ]
+        },
+        {
+            "id": "task1355-3d0ad4f0c69e4ae7b1e214fd41449ba7",
+            "input": "A Dartmouth man is facing child pornography charges after police searched his home Wednesday morning.",
+            "output": [
+                "A Dartmouth man is facing child pornography charges."
+            ]
+        },
+        {
+            "id": "task1355-2b3e5f33c7ce490685eaedc7dc40b7bf",
+            "input": "Former Cuyahoga County Commissioner Jimmy Dimora appears headed back to federal prison after reportedly testifying about corruption before a county grand jury.",
+            "output": [
+                "Jimmy Dimora appears headed back to federal prison."
+            ]
+        },
+        {
+            "id": "task1355-eac19dc202ca432987054e8b90641443",
+            "input": "Amanda Bynes was seen shopping in Bloomingdales a few hours before she started a fire in a residential driveway.",
+            "output": [
+                "Amanda Bynes was seen shopping before she started a fire in a driveway."
+            ]
+        },
+        {
+            "id": "task1355-ff25cf5ce5cc4559a9f88da417213b47",
+            "input": "As the talks over Iran's nuclear program continue in Geneva, Iranian state television has broadcast a simulated missile attack on Israel that demonstrates an Iranian response to any Israeli attack on its nuclear facilities.",
+            "output": [
+                "Iranian television has broadcast a simulated missile attack on Israel."
+            ]
+        },
+        {
+            "id": "task1355-992613a3770145569c8d206417d3c2e7",
+            "input": "Pune FC suffered their first AFC Cup defeat going down 1-3 to Tampines Rovers FC in a Group-H Round 3 encounter at the Jalan Besar Stadium on Wednesday.",
+            "output": [
+                "Pune FC suffered their first AFC Cup defeat going down 1 3 to Tampines Rovers FC."
+            ]
+        },
+        {
+            "id": "task1355-f08e08a630324255b73b3127de664199",
+            "input": "Rascal Flatts guitarist Joe Don Rooney and his wife Tiffany Fallon are expecting their third child.",
+            "output": [
+                "Rascal Flatts guitarist Joe Don Rooney are expecting their third child."
+            ]
+        },
+        {
+            "id": "task1355-0805131e716240a9817f9e1f119403e7",
+            "input": "Former Gators tight end Trey Burton is coming off a disappointing senior season, but he said UF players never wavered in their support of coach Will Muschamp.",
+            "output": [
+                "Trey Burton is coming, but he said players never wavered in their support of Will Muschamp."
+            ]
+        },
+        {
+            "id": "task1355-e24ad342dbe445ff98c606b0e98559f7",
+            "input": "Humans and rats think alike when they have made a mistake and are learning from the experience, scientists, including one of Indian-origin, have found.",
+            "output": [
+                "Humans and rats think alike they have made a mistake."
+            ]
+        },
+        {
+            "id": "task1355-60893d7feb74461ca3749d83636072e0",
+            "input": "Iranian President Hassan Rouhani, in a meeting with his deputies and cabinet ministers on Tuesday, said national resolve is needed to boost economy and culture urged by Supreme Leader Ayatollah Ali Khamenei.",
+            "output": [
+                "National resolve is needed to boost economy and culture."
+            ]
+        },
+        {
+            "id": "task1355-c0cc24803bf4442ba70d5119b4269094",
+            "input": "Mulberry chief executive Bruno Guillon has stepped down from his role at the British luxury brand after two years.",
+            "output": [
+                "Mulberry chief executive Bruno Guillon has stepped down."
+            ]
+        },
+        {
+            "id": "task1355-eca11ecf41b246f89a978630f4082310",
+            "input": "Cressida Bonas was spotted lingerie shopping around Monday evening at Tezeni's in London, and was photographed checking out the selection of new arrivals of brassieres while chatting on her cell phone with a pal.",
+            "output": [
+                "Cressida Bonas was spotted lingerie shopping at Tezeni in London."
+            ]
+        },
+        {
+            "id": "task1355-e427e547faee4dafbf6f43e5fe59d1d7",
+            "input": "Alice Herz-Sommer, the second oldest person living in London and the world's oldest survivor of the Holocaust turned 110 on Tuesday.",
+            "output": [
+                "Alice Herz-Sommer, the person turned 110."
+            ]
+        },
+        {
+            "id": "task1355-ddba643af778407b86eff65eaaabbf6d",
+            "input": "A judge has ordered rapper Da Brat to pay $3.7 million to the victim she assaulted in October 2007.",
+            "output": [
+                "A judge has ordered Da Brat to pay $ 3.7 million to the victim."
+            ]
+        },
+        {
+            "id": "task1355-009a7c0cbb5a4bfe9be02bc7c3367925",
+            "input": "HONOLULU In his campaign to represent Hawaii in the US House, Republican candidate Charles Djou says Congress needs more centrists like him.",
+            "output": [
+                "Charles Djou says Congress needs more centrists like him."
+            ]
+        },
+        {
+            "id": "task1355-e11c9d4c06c741c2838f2a7794428ab8",
+            "input": "Foreign Ministry spokeswoman on Tuesday stressed that military issues have no place in the nuclear talks between Iran and the Group 5+1.",
+            "output": [
+                "Military issues have no place in the nuclear talks."
+            ]
+        },
+        {
+            "id": "task1355-7d14d1887c8741558d1f0f6c1702d0bb",
+            "input": "I spent 10 years hiding depression on tours abroad I was close to taking the same decision as the England batsman but was scared of the reaction.",
+            "output": [
+                "I spent 10 years hiding depression on tours abroad."
+            ]
+        },
+        {
+            "id": "task1355-b8632694971f4143a3b26392c7b699ce",
+            "input": "MORE than 100 pints of blood were donated in one hour yesterday by Embu town residents for victims of the Westgate Mall terrorist attack.",
+            "output": [
+                "MORE than 100 pints of blood were donated in one hour."
+            ]
+        },
+        {
+            "id": "task1355-3231e64c18954a34be08554b243075eb",
+            "input": "Eni has won a license for exploration block SM-857 offshore Brazil.",
+            "output": [
+                "Eni has won a license - 857 offshore Brazil."
+            ]
+        },
+        {
+            "id": "task1355-f1fe6ad325514d62b5f5983cfbfb4062",
+            "input": "The California drought has prompted some Bay Area residents to collect rain in addition to conserving water.",
+            "output": [
+                "The drought has prompted some Bay Area residents to collect rain."
+            ]
+        },
+        {
+            "id": "task1355-ffc0f25b3fdf42b4b06c9bceb1bfd2db",
+            "input": "An animal rescue centre in Cumbria says it's struggling to cope with the number of animals needing care.",
+            "output": [
+                "An animal centre says it's struggling to cope."
+            ]
+        },
+        {
+            "id": "task1355-41fc41cdd1d54f7d9d47c0430211c23e",
+            "input": "With recent reports suggesting that more than half of all couples will meet online by 2031, the art of those nerve-wracking first dates is more important than ever for this year's Valentines.",
+            "output": [
+                "More than half of all couples will meet online by 2031."
+            ]
+        },
+        {
+            "id": "task1355-a595a07dc18d443396d54cd3993b025f",
+            "input": "Actor Philip Seymour Hoffman has been found dead in his New York apartment from an apparent drug overdose.",
+            "output": [
+                "Philip Seymour Hoffman has been found dead."
+            ]
+        },
+        {
+            "id": "task1355-f197eaa7d1ae4361850ad9250e0b1c69",
+            "input": "A Clifton man died early Monday after he lost control of his car and it crashed in the Oakton area, Fairfax County police said.",
+            "output": [
+                "A Clifton man died after he lost control of his car."
+            ]
+        },
+        {
+            "id": "task1355-2b7670755eea43e0bde3250b6692e115",
+            "input": "India-born Satya Nadella said he ``raised his hand'' to take up the top job at Microsoft as he believed his role as CEO would enable him tomake an impact in an increasingly ``software-powered'' world and drive innovation.",
+            "output": [
+                "Satya Nadella raised his hand to take up the job."
+            ]
+        },
+        {
+            "id": "task1355-37b7a8d9282f44439d243bd505f5b611",
+            "input": "ESPN reports New York Yankees infielder Alex Rodriguez stormed out of his grievance hearing with MLB officials after an arbitrator ruled commissioner Bud Selig did not have to testify before the disgraced slugger's legal team.",
+            "output": [
+                "Alex Rodriguez stormed hearing after an arbitrator ruled Bud Selig did not have to testify."
+            ]
+        },
+        {
+            "id": "task1355-02e79c02644945c19ce2aa0297a4767c",
+            "input": "The World Bank has said that Pakistan will benefit from granting the Most Favoured Nation status to India.",
+            "output": [
+                "Pakistan will benefit from granting the Most Favoured Nation status to India."
+            ]
+        },
+        {
+            "id": "task1355-1a7db0cf480d45d9bfcafbc693de6cd7",
+            "input": "Zimbabwean President Robert Mugabe appointed a new cabinet Tuesday, retaining long-time allies and naming hard-liner Emmerson Mnangagwa as justice minister.",
+            "output": [
+                "Robert Mugabe appointed a new cabinet."
+            ]
+        },
+        {
+            "id": "task1355-9b6d8e782aa04e959321f77da3544703",
+            "input": "BMW Group Middle East has confirmed that the new BMW 5 Series will go on sale in the Middle East in September.",
+            "output": [
+                "The new BMW 5 Series will go on sale in September."
+            ]
+        },
+        {
+            "id": "task1355-f0582283c21b4dcb8d34aa43391c1a42",
+            "input": "Robert Levinson, an American who disappeared in Iran in 2007, was in the country working for the CIA, according to a report from the Associated Press's Matt Apuzzo and Adam Goldman.",
+            "output": [
+                "Robert Levinson, who disappeared in Iran in 2007, was in the country working for the CIA."
+            ]
+        },
+        {
+            "id": "task1355-02e0efea73db407c9bf82ed39ed76f22",
+            "input": "The Phillies want to keep Chase Utley, but other teams are interested in acquiring him.",
+            "output": [
+                "The Phillies want to keep Chase Utley."
+            ]
+        },
+        {
+            "id": "task1355-f5b91f01915940ce96a3d7f259d73e68",
+            "input": "NEW YORK Oil driller Transocean has agreed to a deal with billionaire investor Carl Icahn after a months-long proxy fight.",
+            "output": [
+                "Transocean has agreed to a deal with Carl Icahn."
+            ]
+        },
+        {
+            "id": "task1355-b2f6868020304cc0b0ef2115964a0e2e",
+            "input": "Hindalco Chairman Kumar Mangalam Birla, who is named in the FIR in the alleged coal block allocation scam, on Tuesday met Law and Telecom Minister Kapil Sibal.",
+            "output": [
+                "Kumar Mangalam Birla met Law and Kapil Sibal."
+            ]
+        },
+        {
+            "id": "task1355-66ed95b224cb4123a4d22140fe3f7dbe",
+            "input": "A woman accused of beating her poodle puppy to death and then burying it in her backyard was allowed to go free Thursday.",
+            "output": [
+                "A woman accused of beating her puppy to death was allowed."
+            ]
+        },
+        {
+            "id": "task1355-d6cd51ede1d944e3b2ee6bee5546b27c",
+            "input": "South African stocks rallied on Friday after stumbling in the previous session, with the Gold Mining Index leaping over 5 percent as bullion's spot price raced to three-month highs above $1,300 an ounce.",
+            "output": [
+                "South African stocks rallied."
+            ]
+        },
+        {
+            "id": "task1355-a4d2dafb4c984cc5bd81f7c259f41da4",
+            "input": "A Chicago police officer was hit in the head with a baseball bat while trying to break up a fight in the West Englewood neighborhood early Saturday, according to authorities.",
+            "output": [
+                "A Chicago officer was hit in the head with a baseball bat."
+            ]
+        },
+        {
+            "id": "task1355-d074909d5283421cbdd0487827934776",
+            "input": "China brought its latest concern against Japan to the United Nations, calling into question Japanese Prime Minister Shinzo Abe's motives for visiting a controversial war shrine and urged him to correct his mistaken outlook on history.",
+            "output": [
+                "China brought its latest concern against Japan to the United Nations."
+            ]
+        },
+        {
+            "id": "task1355-8493761f865a493da32cec47d333922a",
+            "input": "Bulgaria continues to improve its position and now occupies 57th place among 148 countries in the annual competitiveness report, ``The Global Competitiveness Report 2013-2014'' of the World Economic Forum, announced by the Center for Economic Development, partner of the World Economic Forum in Bulgaria.",
+            "output": [
+                "Bulgaria continues and occupies 57th place among 148 countries in the report, The Global Competitiveness Report 2013 - 2014."
+            ]
+        },
+        {
+            "id": "task1355-025f45d60c234d3a9fcbfb8d78e32b82",
+            "input": "After weeks of rumors and expectations, Google has officially introduced Android 4.3 Jelly Bean.",
+            "output": [
+                "Google has officially introduced Android 4.3 Jelly Bean."
+            ]
+        },
+        {
+            "id": "task1355-b6adbbefe42b4f9786e7794eeb348216",
+            "input": "A man found dead in a Fairfield hotel room on Sunday, Sept. 1 has been identified as Matthew Wuss, 20, of Chester.",
+            "output": [
+                "A man found dead in a Fairfield hotel room has been identified."
+            ]
+        },
+        {
+            "id": "task1355-678d28fd274240bfa29b6cd3b7e21709",
+            "input": "GeoPark, the Latin American oil and gas explorer, operator and consolidator with assets and production in Chile, Colombia, Brazil and Argentina, is to seek a listing in New York.",
+            "output": [
+                "GeoPark, is to seek a listing in New York."
+            ]
+        },
+        {
+            "id": "task1355-c99a5d9421b443e0b4fcc48fd1c07960",
+            "input": "Multi-platinum selling diva Lady Gaga is fighting to keep her 'Queen of Pop' crown with a hotly-anticipated third album, but early reception in the US and Britain has been lukewarm.",
+            "output": [
+                "Lady Gaga is fighting to keep crown."
+            ]
+        },
+        {
+            "id": "task1355-1a0432cd9693468caaab5e4e5940205d",
+            "input": "Karachi police in their continued drive against criminals, arrested 210 accused from various parts of the city during the past three days.",
+            "output": [
+                "Karachi police, arrested 210 accused during the past three days."
+            ]
+        },
+        {
+            "id": "task1355-9f5e747888d842679740987ef4bea6ea",
+            "input": "It's tax day, the deadline to file your federal taxes.",
+            "output": [
+                "It's tax day."
+            ]
+        },
+        {
+            "id": "task1355-23dd76badd9746459d74aa7e62510d90",
+            "input": "Facebook is re-designing the ``Like'' button for the first time since the button was introduced in 2010.",
+            "output": [
+                "Facebook is re-designing the Like button."
+            ]
+        },
+        {
+            "id": "task1355-0f83a0ab2b96484f832dcb8f01e69eba",
+            "input": "Divers found the body of a young boy in the Sandy River near Glenn Otto Park Thursday, authorities told KGW.",
+            "output": [
+                "Divers found the body of a young boy in the Sandy River."
+            ]
+        },
+        {
+            "id": "task1355-83a0ed6dc6d44afdb127bcb196972880",
+            "input": "The Academy has announced that Craig Zadan and Neil Meron will return to produce the 2015 Oscars in February.",
+            "output": [
+                "Craig Zadan and Neil Meron will return to produce the 2015 Oscars."
+            ]
+        },
+        {
+            "id": "task1355-53a0cb88025d4d5396850250c5c83a6b",
+            "input": "New York '' The stock market is rising slightly at midday after two key reports left a mixed picture of the US economy.",
+            "output": [
+                "New York The stock market is rising slightly at midday."
+            ]
+        },
+        {
+            "id": "task1355-b13b52638e924c5aa4eb0b91fe5079c8",
+            "input": "Glander International Bunkering DMCC is please to announce the promotion of Mr. Alexandros Margaritis to Senior Bunker & Lubricant Trader and Team Leader as of 1st May 2014.",
+            "output": [
+                "Glander International Bunkering DMCC is to announce the promotion."
+            ]
+        },
+        {
+            "id": "task1355-44cbaf0f78bc44b99d538740a88920b2",
+            "input": "A Virginia state senator and one-time candidate for governor stabbed by his son said Friday that he is ``alive so must live,'' his first public statement since the assault and his son's suicide shortly thereafter.",
+            "output": [
+                "He is alive so must live."
+            ]
+        },
+        {
+            "id": "task1355-ba0f7dc8e1bc4d9a8c8a0abdd76e1db5",
+            "input": "Japanese electronics manufacturer Toshiba Corp. late Monday announced that it will start mass production shipments of ``T4K71'', a 1080p, 1.12Âµm, CMOS image sensor with color noise reduction or CNR, on December 2.",
+            "output": [
+                "Toshiba Corp. will start mass production shipments of T4K71, a 1080p, 1.12Âµm, CMOS image sensor."
+            ]
+        },
+        {
+            "id": "task1355-1871d2cc27cb4242bcd87ffe09cdf9fd",
+            "input": "A major overhaul of international taxation designed to eliminate loopholes that enable many companies to keep their tax bills low is proceeding on schedule, with the first of a series of draft recommendations to be published for consultation in March, the Organization for Economic Cooperation and Development said Thursday.",
+            "output": [
+                "A overhaul of international taxation is proceeding on schedule."
+            ]
+        },
+        {
+            "id": "task1355-9ecef1b8e6d64cdab9f9a2e7cc4192d4",
+            "input": "New England Patriots wide receiver Danny Amendola said he is ready to play Sunday's game against the Miami Dolphins after passing concussion tests this week.",
+            "output": [
+                "Danny Amendola is ready to play."
+            ]
+        },
+        {
+            "id": "task1355-a68844ff51834ebdad2a14c87d9b2a98",
+            "input": "Gwyneth Paltrow, 41 and husband Chris Martin, 37 are to separate after more than 10 years of marriage, the actress announced on her website GOOP.",
+            "output": [
+                "Gwyneth Paltrow, and Chris Martin, 37 are to separate."
+            ]
+        },
+        {
+            "id": "task1355-1f6d3605db1e447db5671cac6586df41",
+            "input": "IT services provider ASG Group has won an outsourcing deal with engineering firm Clough which is believed to be worth between $7 and $9 million.",
+            "output": [
+                "ASG Group has won an outsourcing deal with Clough."
+            ]
+        },
+        {
+            "id": "task1355-e60c9cb0bc874ed7951dd7a85a39fa2e",
+            "input": "The Mizoram government on Thursday disowned a company which claimed itself to be a state government undertaking and said strict disciplinary action would be taken against the senior IPS officer who has floated the firm.",
+            "output": [
+                "The Mizoram government disowned a company which claimed to be a government undertaking."
+            ]
+        },
+        {
+            "id": "task1355-ba96af7a7976433e9e279704104b468a",
+            "input": "The Montreal Exchange announced today that it has upgraded its SOLA derivative trading platform, improving both trading system performance and order management capacity.",
+            "output": [
+                "The Montreal Exchange has upgraded its derivative trading platform."
+            ]
+        },
+        {
+            "id": "task1355-43b4b362cd6f437f859aeae066e5e8d1",
+            "input": "Twitter Inc. was sued for $124 million by two financial firms that claim the San Francisco-based company engineered a failed private sale of its shares to boost investor interest before a planned initial public offering.",
+            "output": [
+                "Twitter Inc. was sued for $ 124 million by two financial firms."
+            ]
+        },
+        {
+            "id": "task1355-bc4a636b56594df5878934f194e15bbf",
+            "input": "Princess Beatrix, the former Dutch queen, has undergone surgery after falling and breaking a cheekbone, the Royal House announced Sunday.",
+            "output": [
+                "Beatrix, the queen, has undergone surgery."
+            ]
+        },
+        {
+            "id": "task1355-1f9c2299c4c6485999e2c429aa65aefd",
+            "input": "iQuoteXpress, a leading worldwide provider of sales proposal, e-catalog, configuration and reporting software, today announced that OMED of Nevada has added users to its iQuoteXpress subscription agreement.",
+            "output": [
+                "OMED of Nevada has added users to its iQuoteXpress agreement."
+            ]
+        },
+        {
+            "id": "task1355-736e90d68e7f494eab2d7a6d63af6f5a",
+            "input": "Whatever the crisis or embarrassment to his administration, Pres. Obama don't know nuttin' about it.",
+            "output": [
+                "The crisis, don't know nuttin."
+            ]
+        },
+        {
+            "id": "task1355-808788990b72478bbb4dbcbcff48bcc0",
+            "input": "The Federal Airports Authority of Nigeria on Thursday said it never approved Bi-Courtney terminal design, adding that it was not involved in all stages of the approval.",
+            "output": [
+                "The Federal Airports Authority of Nigeria never approved Bi-Courtney terminal design."
+            ]
+        },
+        {
+            "id": "task1355-9e985a48857a4de188ca404034c587dc",
+            "input": "Microsoft Corporation will still make millions of dollars from Windows XP, the more than a decade old version of its Windows operating system despite the fact that it stopped selling the software in 2010 and recently ceased supporting it.",
+            "output": [
+                "Microsoft Corporation will still make millions from Windows XP."
+            ]
+        },
+        {
+            "id": "task1355-ffcedc8156284d59b0561177070f6663",
+            "input": "NIS America has announced that they will be releasing Toradora with a full English dub Blu-ray on July 1, 2014.",
+            "output": [
+                "NIS America will be releasing Toradora with a Blu-ray."
+            ]
+        },
+        {
+            "id": "task1355-4cc0137e550e4aa9924c7a2f6c5ff84b",
+            "input": "Big Cinemas, a division of Reliance MediaWorks, has entered washroom advertising.",
+            "output": [
+                "Big Cinemas has entered washroom advertising."
+            ]
+        },
+        {
+            "id": "task1355-c4208d0264fd44e2899831ea84784d92",
+            "input": "Late pop icon Michael Jackson has been accused of beating Bubbles by his former brother-in-law, while a leading chimpanzee expert claimed the pet was harmed during his time with the singer.",
+            "output": [
+                "Michael Jackson has been accused of beating Bubbles."
+            ]
+        },
+        {
+            "id": "task1355-9cd39790e21e4c1d836b3ff8a138576c",
+            "input": "Hundreds of thousands turn up in St Peter's Square for a historic day, whereby two popes will officially be canonised as saints.",
+            "output": [
+                "Two popes will officially be canonised."
+            ]
+        },
+        {
+            "id": "task1355-2c19de55b86e459d81137ea8895630c9",
+            "input": "Vera Bradley is recalling approximately 98,000 bear ring rattles and bunny stuffed toys because a pom-pom tail can detach from the items, posing a choking hazard to young children.",
+            "output": [
+                "Vera Bradley is recalling approximately 98,000 bear rattles and bunny stuffed toys, posing a choking hazard."
+            ]
+        },
+        {
+            "id": "task1355-6a5593300d5d4c06b403fcd7752db571",
+            "input": "Hong Kong A listers Chow Yun Fat and Nicholas Tse took to the red carpet in Macau last night to promote their new film ``Man from Macau.''",
+            "output": [
+                "Chow Yun Fat took in Macau to promote their film Man."
+            ]
+        },
+        {
+            "id": "task1355-3dd5445b86b44243be663f979463bd11",
+            "input": "An unidentified man died on Friday afternoon after he set himself on fire at the National Mall, authorities say.",
+            "output": [
+                "An man died after he set on fire at the National Mall."
+            ]
+        },
+        {
+            "id": "task1355-41983da601c144448ca1bad97f5bf404",
+            "input": "For the first time in Olympic history, the Olympic torch has been launched into space.",
+            "output": [
+                "The Olympic torch has been launched into space."
+            ]
+        },
+        {
+            "id": "task1355-74275315d880465cbe27ea0f4f62383d",
+            "input": "African governments need to rein in public spending if they are to avoid being swept up in a tide of inflation when the global economy improves, a senior World Bank economist said Monday.",
+            "output": [
+                "African governments need to rein in spending, a World Bank economist said."
+            ]
+        },
+        {
+            "id": "task1355-c9c2a1285d5348b397ed1927606af948",
+            "input": "Republic of Ireland skipper Robbie Keane sat out training on Wednesday morning just two days before the World Cup qualifier in Germany.",
+            "output": [
+                "Republic of Robbie Keane sat out training."
+            ]
+        },
+        {
+            "id": "task1355-34326bc2824949988256877abf275093",
+            "input": "Tamil Nadu Government today unveiled a new industrial policy, an exclusive policy for automobile sector and the phase-II Vision 2023 document.",
+            "output": [
+                "Tamil Nadu Government today unveiled a new industrial policy, and the Vision 2023 document."
+            ]
+        },
+        {
+            "id": "task1355-6370f2d7bccb444d9c6e38f5d5737db9",
+            "input": "The UPA chairperson alleged that the BJP only makes promises while the Congress delivers.",
+            "output": [
+                "The BJP makes promises while the Congress delivers."
+            ]
+        },
+        {
+            "id": "task1355-1ec50f514d0e48f987b576c88a4f86bc",
+            "input": "Valletta today announced a number of new initiatives for supporters including that the club was in the process of publishing a book about the history of football in Valletta.",
+            "output": [
+                "Valletta today announced a number of new initiatives for supporters."
+            ]
+        },
+        {
+            "id": "task1355-fa7d1e3050984785b84ec1b8e2a893f1",
+            "input": "Due to repair of a water line near Alipur drain in Narela, water supply will be affected on Wednesday and Thursday in Bakhtawarpur, Jhangola, Tigipur, Kushak No III, Mohammadpur, Ramzanpur, Singhu, Palla, Tajpur, Akbarpur Mazra, Alipur, Jindpur, Bakoli, Khampur, Budhpur and Hamidpur Villages, Holambi Kalan, Holambi Khurd, Ghoga, Sannoth, Khera Kalan, Khera Khurd, Naya Bans, Barwala, Prahladpur, Mamurpur, Pana Udyan and Pana Paposian Narela, UA Colonies of Narela, Regularized colones of Narela, JJ Cluster Narela, DDA area Narela Industrial area Narela and Metro Vihar Phase-I and II near Holambi Kalan Village, Nangli Poona Village, Kadipur Village, Mukhmelpur Village, Ibrahimpur Village, Badli Village, Libaspur Village, Bawana Village, Katewara, Bajitpur, Nangal Thakran, Quatabgarh, Ochandi, Punjab Khor, Jat Khor, Daryapur, Mungeshpur, Tatesar and Zheemarpura Villages.",
+            "output": [
+                "Water supply will be affected."
+            ]
+        },
+        {
+            "id": "task1355-f3b68171684b4a769a782884bfad5256",
+            "input": "Clark County commissioners Wednesday rejected a $400,000 state loan that was to be used to renovate the Springview Government Center.",
+            "output": [
+                "Clark County commissioners rejected a $ 400,000 state loan."
+            ]
+        },
+        {
+            "id": "task1355-b65aae957c54454e9a2b3aa9858a2172",
+            "input": "Everton midfielder Gareth Barry believes that a draw was the fairest result in this evening's Premier League match against West Bromwich Albion.",
+            "output": [
+                "Gareth Barry believes a draw was the fairest result."
+            ]
+        },
+        {
+            "id": "task1355-88aac63edd0e443fad31f1753d6eff99",
+            "input": "European Central Bank executive board member Peter Praet has said key interest rates would remain at current levels or be cut further as long as the inflation trend remains restrained.",
+            "output": [
+                "Key interest rates would remain at current levels."
+            ]
+        },
+        {
+            "id": "task1355-ec68d8b65ea14dbc982c8823b6d049de",
+            "input": "Ambulance response times will improve within the next two years according to the head of Ambulance Victoria.",
+            "output": [
+                "Ambulance response times will improve."
+            ]
+        },
+        {
+            "id": "task1355-ccd4aaaf47ca4971a67151d7f79d514d",
+            "input": "The Big Ten finally revealed its new logo and division names today and missed badly on both.",
+            "output": [
+                "The Big Ten revealed its logo and division names."
+            ]
+        },
+        {
+            "id": "task1355-b5c7a3f0b76a487c961e93c2df339721",
+            "input": "Former Kentucky and current Washington Wizards guard John Wall is not very happy after being left off the 28 man roster for the US Men's National Team for a chance to compete in the 2014 World Games and 2016 Olympics.",
+            "output": [
+                "John Wall is not happy."
+            ]
+        },
+        {
+            "id": "task1355-6fa155491ecb4159b66d20dbb9d1e0a3",
+            "input": "Zywave Inc., a software company that employs 366 people in Wauwatosa, has sold its insurance division and the Zywave brand name to Aurora Capital Group, a private equity firm in Los Angeles.",
+            "output": [
+                "Zywave Inc. has sold its insurance division."
+            ]
+        },
+        {
+            "id": "task1355-5945ed26b50d4e9ca35b553a50b7f604",
+            "input": "David Bowie is preparing another surprise for his fans after collaborating with Canadian rockers Arcade Fire on a new track.",
+            "output": [
+                "David Bowie is preparing after collaborating with Arcade Fire."
+            ]
+        },
+        {
+            "id": "task1355-5a3e5072e9e54c778ce0dd92ac618953",
+            "input": "The carbon capture and storage project at the Boundary Dam Power Station is nearing completion.",
+            "output": [
+                "The carbon capture and storage project is nearing completion."
+            ]
+        },
+        {
+            "id": "task1355-7d1eafa82328495992d4fa2b6e3e264e",
+            "input": "LL Bean and the US Consumer Product Safety Commission has voluntarily recalled painted cottage step stools due to a fall hazard posed to consumers.",
+            "output": [
+                "LL Bean has recalled cottage step stools due to a fall hazard."
+            ]
+        },
+        {
+            "id": "task1355-8f5322abb1fa476180ad430409c16565",
+            "input": "The new hand held, re-chargeable ozone monitor from Envin Scientific detects ambient levels of ozone.",
+            "output": [
+                "The new hand held, re-chargeable ozone monitor detects."
+            ]
+        },
+        {
+            "id": "task1355-58b289d6805b48848ee2b305c24b57a7",
+            "input": "Senior gold miner Goldcorp late on Wednesday said that it aimed to lift gold output by about 50% over the next two years to about four-million ounces as new projects came on line.",
+            "output": [
+                "Goldcorp aimed to lift output by about 50% over the two years."
+            ]
+        },
+        {
+            "id": "task1355-3d1320b66d9a4a80bf119ca643f2fd33",
+            "input": "A Webster County man was killed in a motorcycle crash in Nicholas County, deputies say.",
+            "output": [
+                "A Webster County man was killed in a motorcycle crash in Nicholas County."
+            ]
+        },
+        {
+            "id": "task1355-0201daa06b46416f8b483e968248bcd3",
+            "input": "An Indian oil tanker seized by Iran in August for allegedly polluting Gulf waters has been allowed to leave the port where it was held, an Iranian official said yesterday.",
+            "output": [
+                "An Indian tanker seized by Iran has been allowed to leave."
+            ]
+        },
+        {
+            "id": "task1355-de14bffc160741b6985af8111c65a36e",
+            "input": "Jim Rogers, Chairman, Rogers Holding is of the view that excess liquidity globally is driving the equity markets.",
+            "output": [
+                "Excess liquidity globally is driving the equity markets."
+            ]
+        },
+        {
+            "id": "task1355-f53e5eb0d2c2486b9baa818bb164411a",
+            "input": "Media General, the parent company of WFLA, Channel 8, in Tampa, is buying fellow TV broadcaster LIN Media in a deal worth about $1.6 billion in cash and stock, the companies announced Friday.",
+            "output": [
+                "Media General is buying LIN Media in a deal worth about $ 1.6 billion."
+            ]
+        },
+        {
+            "id": "task1355-9ce69a70f0af47d9ad3cb63e7b0b63e4",
+            "input": "Poyet, a former Spurs player and coach, said: ``Nothing surprises me in football. Now, it's not nice. From the managers' point of view no, it is not nice.",
+            "output": [
+                "It is not nice."
+            ]
+        },
+        {
+            "id": "task1355-77bd1a90b5fe45039777a2a099184f95",
+            "input": "Memphis Made Brewing Co., a new local brewery, will debut its two inaugural brands Oct. 11 at the Flying Saucer in Downtown Memphis and Cordova.",
+            "output": [
+                "Memphis Made Brewing Co. will debut its two brands."
+            ]
+        },
+        {
+            "id": "task1355-5b1e468575fa4e96b10b6288ea0d29ea",
+            "input": "The aptly titled ``How much time have you wasted on Facebook?'' app simply asks you to estimate how many minutes a day you spend on the social networking site and then goes through your timeline to the earliest post.",
+            "output": [
+                "The How much time have you wasted on Facebook."
+            ]
+        },
+        {
+            "id": "task1355-2035c2dc48014c99a96fde96cc8dea53",
+            "input": "With the Economic Freedom Fighters appealing to many young voters, political party leaders on Thursday were asked to motivate why the youth should vote for them.",
+            "output": [
+                "Why the youth should vote."
+            ]
+        },
+        {
+            "id": "task1355-1fc2dc75346f457c8fc0ee26d08258b3",
+            "input": "However, that means high quality players are being left on the bench, so which of this Newcastle quintet should feel most hard done by.",
+            "output": [
+                "That means, so which of this Newcastle quintet should feel most hard done by."
+            ]
+        },
+        {
+            "id": "task1355-e9082eac2a3b45df99b66e67f9ec3fb7",
+            "input": "``I literally saw the title, and I said, 'Oh, hell no, I'm not playing a trophy wife,' '' Akerman says at the Television Critics Association tour.",
+            "output": [
+                "I 'm not playing a trophy wife."
+            ]
+        },
+        {
+            "id": "task1355-f0441dd7f7ed4687ab99483229c5fdfc",
+            "input": "Ed Sheeran has released a new video for ``I See Fire,'' a song he wrote for Peter Jackson's upcoming JRR Tolkein film, The Desolation of Smaug, the sequel to 2012's The Hobbit:",
+            "output": [
+                "Ed Sheeran has released a new video for I See Fire."
+            ]
+        },
+        {
+            "id": "task1355-ab8f354af0c8460cb7df468d5b2ea794",
+            "input": "Police foiled a bid to demolish a Hindu temple in Deopara area under Nachole upazila of Chapainawabganj and arrested an alleged land grabber and his men yesterday.",
+            "output": [
+                "Police foiled a bid to demolish a Hindu temple under Nachole upazila."
+            ]
+        },
+        {
+            "id": "task1355-81e251194c1d43ddb5da95b96359cec9",
+            "input": "A man in his 30s was taken to hospital after he was tasered by a police officer in Northbridge this morning.",
+            "output": [
+                "A man was taken to hospital after he was tasered."
+            ]
+        },
+        {
+            "id": "task1355-2aaed8a3b22a40078140384d0cc53370",
+            "input": "Malaysia and Japan have agreed to give the commitment towards strengthening the second wave of the ``Look East Policy'' in that it should not be limited to training and education, but should be more forward-looking with better focus and more economic-oriented.",
+            "output": [
+                "Malaysia and Japan have agreed to give the commitment towards strengthening the second wave of the Look East Policy."
+            ]
+        },
+        {
+            "id": "task1355-fc7de0dce66649c6922bca4fd41cdd9f",
+            "input": "Kanye West was born in Atlanta to Donda and Ray West.",
+            "output": [
+                "Kanye West was born."
+            ]
+        },
+        {
+            "id": "task1355-3b4e88f4e9f042fc8c4a4e2c0217bc59",
+            "input": "Attorney General and gubernatorial candidate Greg Abbott will visit Abilene and Brownwood on August 29 in a continuation of his Main Street Texas Tour.",
+            "output": [
+                "General and Greg Abbott will visit Abilene and Brownwood."
+            ]
+        },
+        {
+            "id": "task1355-7a987380b3244961b593480eea67557d",
+            "input": "Severe weather is sweeping through the southern states and will make a turn up to the Mid-Atlantic on Monday.",
+            "output": [
+                "Severe weather is sweeping through the southern states."
+            ]
+        },
+        {
+            "id": "task1355-8163ab8772404d86ab7d2322224dd47e",
+            "input": "The City of Carroll is hosting its first ever youth triathlon on Saturday, May 24 th .",
+            "output": [
+                "The City of Carroll is hosting its first ever youth triathlon."
+            ]
+        },
+        {
+            "id": "task1355-08404c82f4ad4f0e81c577a95941fb14",
+            "input": "Brian McDermott will return to work at Leeds United on Monday morning following a chaotic and extraordinary couple of days at Elland Road.",
+            "output": [
+                "Brian McDermott will return at Leeds United."
+            ]
+        },
+        {
+            "id": "task1355-624866930de54a2abd8f9d3f19cadff2",
+            "input": "Pakistan Railways has recovered stolen track worth Rs.9 million during last few months.",
+            "output": [
+                "Pakistan Railways has recovered stolen track worth Rs.9 million."
+            ]
+        },
+        {
+            "id": "task1355-618e361ac3d545ac984873d271f233e7",
+            "input": "Director Martin Scorsese was honoured at the Los Angeles County Museum of Art on Saturday as a host of stars helped to raise $4.1 million for the institution's film programme.",
+            "output": [
+                "Martin Scorsese was honoured at the Los Angeles County Museum of Art."
+            ]
+        },
+        {
+            "id": "task1355-e22ada8d821f4a729068aacf63715d99",
+            "input": "IT department submits its report on NSEL crisis to ED probe panel and alleges that Mohan India Pvt Ltd is a big defaulter and is not an actual commodity trader.",
+            "output": [
+                "Department submits its report on NSEL crisis to ED probe panel."
+            ]
+        },
+        {
+            "id": "task1355-7a1c451971f84460bc27c05a0efc74bf",
+            "input": "DeLaet tied second at The Barclays, a new career high for the former Weyburn resident.",
+            "output": [
+                "DeLaet tied second at The Barclays, a new career high."
+            ]
+        },
+        {
+            "id": "task1355-4be960e375154eeab369ddca2232435b",
+            "input": "Indian Cricket team batsman Cheteshwar Pujara has been ranked at the 8th position by a top US-based sports website as a good investment option in sports.",
+            "output": [
+                "Cheteshwar Pujara has been ranked at the 8th position as a good investment option in sports."
+            ]
+        },
+        {
+            "id": "task1355-3d9135a32ff94004a51987ce6a499b54",
+            "input": "A Shell Rock woman has been hurt in a single-vehicle crash in rural Butler County.",
+            "output": [
+                "A Shell Rock woman has been hurt in a crash."
+            ]
+        },
+        {
+            "id": "task1355-7749e1841f564cafab4cd7e7373475d6",
+            "input": "Right-hander Tim Hudson made his first start since breaking his ankle on July 24, pitching two no-hit innings, and the San Francisco Giants beat the Arizona Diamondbacks 5-3 Sunday.",
+            "output": [
+                "Tim Hudson made his first start since breaking his ankle."
+            ]
+        },
+        {
+            "id": "task1355-6006e528852d4e8a84a326be2493bfbd",
+            "input": "Turkish assets fell on Monday after the International Monetary Fund criticised the country for not tightening policy enough to reduce its external imbalances, and as investors grow more cautious over the US budget stand-off and debt ceiling.",
+            "output": [
+                "Turkish assets fell."
+            ]
+        },
+        {
+            "id": "task1355-5f3f1818ae424ca788de4785084db5e2",
+            "input": "n According to police, thieves targeted three vehicles while parked outside Pasquale's Ristorante & Pizza, Sans Souci Parkway.",
+            "output": [
+                "Thieves targeted three vehicles."
+            ]
+        },
+        {
+            "id": "task1355-f61c5bd9f2244e0b9da21830e433c25a",
+            "input": "A weekend summit calling for peace in Chicago is beginning Friday night with a prayer vigil at Salem Baptist Church on east 14th Street for the victims of violence.",
+            "output": [
+                "A weekend summit calling for peace in Chicago is beginning."
+            ]
+        },
+        {
+            "id": "task1355-be75150bbdf246a785979759b46ee141",
+            "input": "A 47-year-old Bryan man was in jail Sunday night after being accused of holding a woman at knifepoint while high on methamphetamine.",
+            "output": [
+                "A man was after being accused of holding a woman at knifepoint."
+            ]
+        },
+        {
+            "id": "task1355-682d4c83227347d8a97a8598e436731d",
+            "input": "In an unusual case out of the United Kingdom, a British woman was jailed for trolling herself on Facebook.",
+            "output": [
+                "A British woman was jailed for trolling herself on Facebook."
+            ]
+        },
+        {
+            "id": "task1355-a5a7655ae3d54c72bacef3bb7f6edb50",
+            "input": "A habitual felon from Pitt County has been sentenced to almost 18 years in prison for a firearm charge.",
+            "output": [
+                "A habitual felon has been sentenced to almost 18 years in prison."
+            ]
+        },
+        {
+            "id": "task1355-2770a0002b11453cb6b35787c8ddd4bb",
+            "input": "Northwest Fire District responded to two motorcycle accidents on Saturday morning, according to Captain Adam Goldberg.",
+            "output": [
+                "Northwest Fire District responded to two motorcycle accidents."
+            ]
+        },
+        {
+            "id": "task1355-c082d8eacf4b467397bd9750172e9a5b",
+            "input": "Elton John is being lined up for a fight scene in new British spy movie 'The Secret Service'.",
+            "output": [
+                "Elton John is being lined up for a fight scene in new movie."
+            ]
+        },
+        {
+            "id": "task1355-2f8b48d8344046b4ab005db8baf84609",
+            "input": "Invensys, a leading supplier of state-of-the-art industrial software, systems and control equipment to the world's major industries, has acquired InduSoft, a provider of HMI and embedded intelligent device software for the automation market.",
+            "output": [
+                "Invensys, has acquired InduSoft."
+            ]
+        },
+        {
+            "id": "task1355-589d9dc8bb884154bd4abf952574d996",
+            "input": "Los Angeles Dodgers shortstop Hanley Ramirez jammed his right shoulder when he tumbled into the stands after a catch Sunday, and the team hopes he can avoid the disabled list.",
+            "output": [
+                "Hanley Ramirez jammed his shoulder."
+            ]
+        },
+        {
+            "id": "task1355-36d31bf5e2d6433692191c48f387cbb7",
+            "input": "The Lancaster Barnstormers will host their third annual job fair during their home game against the Bridgeport Bluefish on Aug. 20.",
+            "output": [
+                "The Lancaster Barnstormers will host their third annual job fair."
+            ]
+        },
+        {
+            "id": "task1355-a6e9f8b638744e7b87151f25d34353f4",
+            "input": "US Secretary of State John Kerry warned Thursday that Iraq risked destabilization from Sunni and Shiite extremists as civil war flares in neighboring Syria.",
+            "output": [
+                "John Kerry warned Iraq risked destabilization from extremists."
+            ]
+        },
+        {
+            "id": "task1355-f060811ac4ed48c197b380a83a014c22",
+            "input": "Gov. Earl Ray Tomblin signed the municipal gun bill into law Tuesday evening and Charleston Mayor Danny Jones said the city would challenge it in court.",
+            "output": [
+                "Earl Ray Tomblin signed the municipal gun bill into law."
+            ]
+        },
+        {
+            "id": "task1355-22ba1a581b8f4aeea6c711d9e21e748c",
+            "input": "Dallas Cowboys owner and general manager Jerry Jones has admitted that he regrets firing former head coach Tom Landry almost 25 years ago.",
+            "output": [
+                "Jerry Jones regrets firing Tom Landry."
+            ]
+        },
+        {
+            "id": "task1355-fd3ed4abf72f4cda953b46bd5f4211f3",
+            "input": "A 22- year- old youth, who had committed suicide in Tarana on February 28, 2014 was sodomised by his four friends.",
+            "output": [
+                "A youth, who had committed suicide was sodomised by his four friends."
+            ]
+        },
+        {
+            "id": "task1355-5caab80ccea9441a9263b62581b42506",
+            "input": "Singapore shares ended flat in thin volume on Friday, as investors assess the US Federal Reserve's next interest rate policy.",
+            "output": [
+                "Singapore shares ended flat."
+            ]
+        },
+        {
+            "id": "task1355-56a349ab9e7b4ec09cc5bb2ffdc4a92b",
+            "input": "An investment guru who owns a $2 million, 10-bedroom mansion in Connecticut was busted for smuggling a knuckle knife through LaGuardia Airport security, officials said Thursday.",
+            "output": [
+                "An investment guru, was busted for smuggling a knife through LaGuardia Airport security, officials said."
+            ]
+        },
+        {
+            "id": "task1355-45899cb932ad4a82bd258708046afe4c",
+            "input": "George Michael has topped the UK album charts with his new album Symphonica.",
+            "output": [
+                "George Michael has topped the UK album charts."
+            ]
+        },
+        {
+            "id": "task1355-cf80a996b56341068ca3071f617fe4be",
+            "input": "A road was briefly closed after a two vehicle car crash in Staining on Monday.",
+            "output": [
+                "A road was closed after a crash."
+            ]
+        },
+        {
+            "id": "task1355-cf33767527d14e61bf055f1239d33975",
+            "input": "Prime Minister Manmohan Singh will Tuesday share the stage here with Gujarat Chief Minister Narendra Modi, who is the BJP's prime ministerial candidate for 2014 polls.",
+            "output": [
+                "Manmohan Singh will share the stage with Narendra Modi."
+            ]
+        },
+        {
+            "id": "task1355-24631c9e3b794cce9bc5de9d25ef2b8b",
+            "input": "Warrington winger Chris Riley is to remain at Wakefield on a week-by-week basis following the expiry of his initial month's loan deal.",
+            "output": [
+                "Chris Riley is to remain at Wakefield."
+            ]
+        },
+        {
+            "id": "task1355-4bcd3a4d775444919e4a5e1a56480344",
+            "input": "Sandra Bullock always played a ''dirty gypsy child'' in her mother's operas when she was growing up.",
+            "output": [
+                "Sandra Bullock played a dirty gypsy child in her mother's operas."
+            ]
+        },
+        {
+            "id": "task1355-42419e5c6f8e46268d645f139f59f377",
+            "input": "Garden Grove seniors are invited to celebrate Mother's Day with a fun-filled event that includes dancing, food, and special treats, sponsored by CareMore healthcare group.",
+            "output": [
+                "Garden Grove seniors are invited to celebrate Mother's Day with a event."
+            ]
+        },
+        {
+            "id": "task1355-f843fa4ed36b47b0b5d1517480044bab",
+            "input": "Chicago-based VEIL OF MAYA has re-signed with Sumerian Records, the label which the band has called its home since the group's inception.",
+            "output": [
+                "VEIL OF MAYA has re-signed with Sumerian Records."
+            ]
+        },
+        {
+            "id": "task1355-9048f2ee5e7c4567abdc08095f82873d",
+            "input": "Case Keenum will start at quarterback Sunday for the Houston Texans in place of the injured Matt Schaub, Texans Coach Gary Kubiak said Thursday.",
+            "output": [
+                "Case Keenum will start at quarterback for the Houston Texans."
+            ]
+        },
+        {
+            "id": "task1355-a87aeead90ab49eea7c64bf02e3a9324",
+            "input": "Floyd Mayweather is open to fighting Amir Khan in the future, despite snubbing the Bolton-born boxer in favour of a May bout with Argentine Marcos Maidana, according to promoters Golden Boy.",
+            "output": [
+                "Floyd Mayweather is open to fighting Amir Khan in the future."
+            ]
+        },
+        {
+            "id": "task1355-9527ed2a849544b993dd81c11d9ecd59",
+            "input": "Adam Jacobs and Courtney Reed, who co-starred as Aladdin and Jasmine in the Seattle premiere of Disney's Aladdin, will reprise their performances in Toronto and on Broadway.",
+            "output": [
+                "Adam Jacobs and Courtney Reed, who co-starred as Aladdin, will reprise."
+            ]
+        },
+        {
+            "id": "task1355-4a3d3abbeda2465198c6fa8521a2b100",
+            "input": "Homes for sale in Sunnyvale, CA are now listed for buyers online by the Transaction Engineers company, according to a RealEstateNewsWire.com report.",
+            "output": [
+                "Homes for sale in Sunnyvale, are now listed by the Transaction Engineers company."
+            ]
+        },
+        {
+            "id": "task1355-845fb7e0367e417c8e2c64f6168d0ab4",
+            "input": "Vancouver-based social-media-management company HootSuite has just raised an eye-popping $165 million during its Series B round.",
+            "output": [
+                "Social-media-management company HootSuite has raised an $ 165 million."
+            ]
+        },
+        {
+            "id": "task1355-938bc0b44a6d4759844daff312f45762",
+            "input": "Controversial TV pitchman Kevin Trudeau, who in July was found in contempt for failing to pay a $37.6 million sanction against him for deceptive marketing, was ordered to jail today and remains in federal custody in Chicago.",
+            "output": [
+                "TV pitchman Kevin Trudeau was ordered to jail."
+            ]
+        },
+        {
+            "id": "task1355-cba02163ba7b418a8c738535c133961b",
+            "input": "A US woman who shares her home with 50 skunks says they are ``wonderful, beautiful animals''.",
+            "output": [
+                "A woman who shares her home with 50 skunks says."
+            ]
+        },
+        {
+            "id": "task1355-d0ec9302259744af925c311aad940ea9",
+            "input": "Bihar Chief Minister Nitish Kumar on Wednesday decried the blame game between BJP and Congress over Kishtwar communal strife and suggested that the Omar Abdullah government be given a proper opportunity to handle the situation.",
+            "output": [
+                "Nitish Kumar decried the blame game over Kishtwar communal strife."
+            ]
+        },
+        {
+            "id": "task1355-a3f708936b0c4c718167d6ea65dded35",
+            "input": "A far-right French mayor has refused to marry a lesbian couple in defiance of a federal law that allows same-sex marriage.",
+            "output": [
+                "A French mayor has refused to marry a lesbian couple."
+            ]
+        },
+        {
+            "id": "task1355-5af511e953984e038a655e3db3358ff1",
+            "input": "A US$5 million fish feed mill with an installed capacity of 24,000 metric tonnes has been inaugurated at Prampram, near Tema, to help boost the aquaculture sector of the country.",
+            "output": [
+                "A fish feed mill has been inaugurated at Prampram."
+            ]
+        },
+        {
+            "id": "task1355-6776be3aff86461483989355155e1e85",
+            "input": "A retired Chicago police sergeant has died, two weeks after he was shot in the neck during a home invasion in the East Side neighborhood, officials said.",
+            "output": [
+                "A retired Chicago sergeant has died, two weeks he was shot during a home invasion."
+            ]
+        },
+        {
+            "id": "task1355-1e0226a699b84687bf77fcbbeb560317",
+            "input": "Three Port Authority police officers have filed a federal lawsuit seeking to overturn promotions they say were unlawful.",
+            "output": [
+                "Three Port Authority officers have filed a federal lawsuit seeking to overturn promotions."
+            ]
+        },
+        {
+            "id": "task1355-98bd7bf0645f4357a8f99294e9d22522",
+            "input": "Dubai, Mar 25 Farhan Akhtar-starrer 'Bhaag Milkha Bhaag' was screened in Saudi Arabia as part of the ongoing seventh Asian Film Festival 2014.",
+            "output": [
+                "Bhaag Milkha Bhaag was screened in Saudi Arabia."
+            ]
+        },
+        {
+            "id": "task1355-4702b31184b54c2881a0590e89fd05ba",
+            "input": "The Brooklyn Nets announced this morning that they will be holding their training camp at Duke University.",
+            "output": [
+                "The Brooklyn Nets will be holding their training camp at Duke University."
+            ]
+        },
+        {
+            "id": "task1355-2cb4310f8dbf4217943dcdadec132572",
+            "input": "Winger Phil Kessel was absent from practice at the Mastercard Center in Etobicoke, ON Monday morning, but it was not because of an injury.",
+            "output": [
+                "Phil Kessel was absent from practice."
+            ]
+        },
+        {
+            "id": "task1355-ad75c59e81c7489d90d5f2a8309a442b",
+            "input": "It's the news many men all over the world won't want to hear - Elle Macpherson has married her billionaire boyfriend Jeffrey Soffer in Fiji, according to reports.",
+            "output": [
+                "Elle Macpherson has married her boyfriend Jeffrey Soffer in Fiji."
+            ]
+        },
+        {
+            "id": "task1355-8c9f6598a1674d9e8494cd8ca59976d1",
+            "input": "Russia will send two ships to the east Mediterranean to strengthen its naval presence because of the 'well-known situation' there, Interfax news agency said on Thursday, Aug.29 referring to the Syria crisis.",
+            "output": [
+                "Russia will send two ships to the east Mediterranean."
+            ]
+        },
+        {
+            "id": "task1355-c2eb912238ce42a39e7f2e008b46c411",
+            "input": "Pakistani batsman Umar Akmal has reportedly been declared fit to play after undergoing medical tests following a mysterious seizure last month during the Caribbean Premier League.",
+            "output": [
+                "Umar Akmal has been declared fit."
+            ]
+        },
+        {
+            "id": "task1355-e461977a09544dbc9c41946d01ad7c1a",
+            "input": "CBI in an affidavit filed yesterday in the court in connection with alleged irregularities in awarding the renovation contract of three hydroelectric projects, said Vijayan had not informed the cabinet about all facts of the deal.",
+            "output": [
+                "Vijayan had not informed the cabinet about all facts of the deal."
+            ]
+        },
+        {
+            "id": "task1355-4dec9094329d49fcb88773c9fe12363c",
+            "input": "Finance Minister Seth Terkper has insisted that Ghana remains a favourable investment destination despite the turbulence in which the economy is currently going through.",
+            "output": [
+                "Ghana remains a favourable investment destination."
+            ]
+        },
+        {
+            "id": "task1355-1b3ffc453cad41439c354ab9ecb98f30",
+            "input": "Hillary Clinton again hinted that she may run for president in 2016 on Saturday night, telling an audience in Arizona she was ``very much concerned'' about the direction of the country and was considering ``all kinds of decisions'' about her future, The Guardian reported.",
+            "output": [
+                "Hillary Clinton may run, telling she was and was considering all kinds of decisions about her future."
+            ]
+        },
+        {
+            "id": "task1355-d72171c608f34261b2fb1ef9813e5767",
+            "input": "The Australian stock market is trading flat on Monday, tracking the mixed cues from Wall Street on Friday.",
+            "output": [
+                "The Australian market is trading flat."
+            ]
+        },
+        {
+            "id": "task1355-dab8d3d307af4f4d9483fe8fe6a8e9b6",
+            "input": "YPO Sora once again strike back with a thrilling win over PSC by 5-4 goals in the semi final match of the ongoing JA District Level Men's Open Football Championship 2014 played at DSA Ground, Kakching today.",
+            "output": [
+                "YPO Sora strike back with a win over PSC."
+            ]
+        },
+        {
+            "id": "task1355-9f6b5f58811d47659c5c1a9e6d19c8ea",
+            "input": "Boston will be tested right off the bat Monday, opening on the road against the improved Baltimore Orioles and 16-game winner Chris Tillman.",
+            "output": [
+                "Boston will be tested right off the bat."
+            ]
+        },
+        {
+            "id": "task1355-9308ffddb9844007b6f0dbe9946d4a13",
+            "input": "Concept Laser has opened a new development center at its headquarters, increasing its capacity for testing and advancement.",
+            "output": [
+                "Concept Laser has opened a new development center."
+            ]
+        },
+        {
+            "id": "task1355-f650414cc6fe46e59bc16f4f4517471b",
+            "input": "A report released Monday ranks quality scores from domestic airlines.",
+            "output": [
+                "A report ranks from domestic airlines."
+            ]
+        },
+        {
+            "id": "task1355-b705213d586e41a192c42440a1f10d9b",
+            "input": "A 7-year-old boy is in critical condition after being struck by a car earlier today, gardai have said.",
+            "output": [
+                "A boy is in critical condition after being struck by a car."
+            ]
+        },
+        {
+            "id": "task1355-680e573acd6e49cabbc1d55cb474922b",
+            "input": "The Russian opposition leader, Alexei Navalny, has been jailed for five years on what people describe as trumped-up charges of embezzlement.",
+            "output": [
+                "The Russian opposition leader, Alexei Navalny, has been jailed."
+            ]
+        },
+        {
+            "id": "task1355-c6a53290f92c4911bb93c2e8bb98e85f",
+            "input": "Linebacker Sean Weatherspoon returned to practice on Wednesday, marking his first day back on the field after being placed on injured reserve/return because of a September foot injury.",
+            "output": [
+                "Sean Weatherspoon returned to practice."
+            ]
+        },
+        {
+            "id": "task1355-379f0641dcf04dbb84f5024eaff8228a",
+            "input": "Tottenham Hotspur forward Harry Kane was ``buzzing'' after scoring his first senior goal at White Hart Lane.",
+            "output": [
+                "Harry Kane was buzzing after scoring his goal at White Hart Lane."
+            ]
+        },
+        {
+            "id": "task1355-c0d4c7e7e2f844f5acd5624548cecc64",
+            "input": "A doctor accused of sexual assault of a victim older than 60 pleaded not guilty today.",
+            "output": [
+                "A doctor accused of sexual assault pleaded not guilty."
+            ]
+        },
+        {
+            "id": "task1355-c1051d127c1a4a46ae0d2e4e9926eea4",
+            "input": "Denver coach John Fox was taken to a hospital in the Charlotte, NC, area Saturday after feeling light-headed while playing golf during the Broncos' bye week.",
+            "output": [
+                "Denver coach John Fox was taken to a hospital."
+            ]
+        },
+        {
+            "id": "task1355-f1d48c674a8b443e89acab6eddd32bb3",
+            "input": "Free seasonal flu shots will be given at Operation Vaccination, sponsored by the Lawrence County Department of Public Safety, Pennsylvania Region 13 and the state Department of Health.",
+            "output": [
+                "Free flu shots will be given."
+            ]
+        },
+        {
+            "id": "task1355-dd1040880ef44bc7bb991a53e8a41716",
+            "input": "President Barack Obama has signed the $1.1 trillion spending bill that funds the federal government through the end of September.",
+            "output": [
+                "Barack Obama has signed the $ 1.1 trillion spending bill."
+            ]
+        },
+        {
+            "id": "task1355-27eb754184f746a08ca6cf0cdac1a0a3",
+            "input": "The state Senate has passed a bill authorizing more speed cameras in the city, a top priority for Mayor Bill de Blasio as part of his Vision Zero traffic safety plan.",
+            "output": [
+                "The Senate has passed a bill authorizing more speed cameras in the city."
+            ]
+        },
+        {
+            "id": "task1355-5d195d309fa04bc68a1008de554d5c38",
+            "input": "And, as this infographic shows, the best things in life aren't free.",
+            "output": [
+                "The best things in life aren't free."
+            ]
+        },
+        {
+            "id": "task1355-a37710e30adf4dbda771b74368545411",
+            "input": "World War Z incites zombie run brain craving feeding frenzy that people are dying for and changes the course of sports equipment to last into the apocalypse.",
+            "output": [
+                "World War Z incites zombie run brain craving feeding frenzy."
+            ]
+        },
+        {
+            "id": "task1355-4cdb48f3879b41d7ba2e3a8ac433cda1",
+            "input": "The Nanticoke Junior High School girls won the 9th grade basketball championship, defeating Wyoming Area recently.",
+            "output": [
+                "The Nanticoke Junior High School girls won the 9th grade basketball championship."
+            ]
+        },
+        {
+            "id": "task1355-5bbe6e901e44423ab48b352d160ee24e",
+            "input": "I covered online loan australia no fax and board with jobs and scholarships and some loans, mind you.",
+            "output": [
+                "I covered online loan australia no fax."
+            ]
+        },
+        {
+            "id": "task1355-b2f51b69eea54923af8a4f0bf8ce4c46",
+            "input": "We found that This payday loan illinois rollover or refinance had 17 external links.",
+            "output": [
+                "This payday loan illinois rollover or refinance had."
+            ]
+        },
+        {
+            "id": "task1355-4ca788ddc5a5483ab620f9f1601905db",
+            "input": "But the only scholarship essay writing help you will not buy at such a company is quality.",
+            "output": [
+                "But the scholarship essay writing help is."
+            ]
+        },
+        {
+            "id": "task1355-6220a122032147aa88567736009f0833",
+            "input": "Lakhimpur Kheri, Mar 25 Congress MP Pramod Tewari today said none can have faith in Narendra Modi if his own party leaders like LK Advani, Murli Manohar Joshi and Jaswant Singh cannot believe him.",
+            "output": [
+                "None can have faith in Narendra Modi."
+            ]
+        },
+        {
+            "id": "task1355-73adbaabb57e4163b1d2b22e1ab11d13",
+            "input": "Russian Foreign Minister Sergei Lavrov has said that Ukraine must meet its commitments based on the agreement reached last week in Geneva.",
+            "output": [
+                "Ukraine must meet its commitments."
+            ]
+        },
+        {
+            "id": "task1355-fa2a1cc2b5394560a9e2ca74451e19a5",
+            "input": "Mike Snoei coached side Pune FC bounced back to winning ways with a 2-0 win over Mohammedan Sporting in an I-League round 21 encounter at the Balewadi sports complex, here on Wednesday.",
+            "output": [
+                "Pune FC bounced back to winning ways."
+            ]
+        },
+        {
+            "id": "task1355-6035c890ce7242e1b42b562d9b532edd",
+            "input": "In a move designed to highlight a new commitment to the women's market, Citizen Watch Co. has tapped singer Kelly Clarkson as its latest brand ambassador.",
+            "output": [
+                "Citizen Watch Co. has tapped Kelly Clarkson."
+            ]
+        },
+        {
+            "id": "task1355-d7ef7699995b45c3b5e87e8585a050dc",
+            "input": "A team of UN chemical weapons experts, in Syria to investigate alleged use of the banned arms, left their Damascus hotel on Thursday afternoon.",
+            "output": [
+                "A team of UN chemical weapons experts left their Damascus hotel."
+            ]
+        },
+        {
+            "id": "task1355-43505701d2f24a21851154d949cbde0f",
+            "input": "Former reality star Tila Tequila took to Facebook and Twitter Friday to announce she's pregnant.",
+            "output": [
+                "Tila Tequila took to announce she's pregnant."
+            ]
+        },
+        {
+            "id": "task1355-61cf71a9686b4b3db130992d022fa895",
+            "input": "``JeffreyGroup will be focused 100% on Latin America, which is essentially where we were for the first 11 years of our 20-year existence,'' Jeffrey Sharlach, chairman and CEO of JeffreyGroup told PRWEEK.",
+            "output": [
+                "JeffreyGroup will be focused on Latin America."
+            ]
+        },
+        {
+            "id": "task1355-225df4dcc5fd432db5a5663895f1d880",
+            "input": "Highwoods Properties Inc issued an update on its FY14 earnings guidance on Tuesday morning.",
+            "output": [
+                "Highwoods Properties Inc issued on its FY14 earnings guidance."
+            ]
+        },
+        {
+            "id": "task1355-88b970d937474253ba9cc616d9df498e",
+            "input": "State Corrections officials say an inmate serving a ten year sentence escaped from a work release program Friday.",
+            "output": [
+                "An inmate escaped from a work release program."
+            ]
+        },
+        {
+            "id": "task1355-f1ce7caffc974c758aa34cf41c8046c6",
+            "input": "Air India is likely to complete all the required work to join the Star Alliance this summer.",
+            "output": [
+                "Air India is likely to complete the work to join the Star Alliance this summer."
+            ]
+        },
+        {
+            "id": "task1355-b298b7e6faa74059b6ea3315e3b381ad",
+            "input": "The Gambia reopened its borders with Senegal on Friday, ending a week-long diplomatic stand-off between the west African neighbours, officials said.",
+            "output": [
+                "The Gambia reopened its borders with Senegal."
+            ]
+        },
+        {
+            "id": "task1355-892820f659ac41258f753fd7e0b380c7",
+            "input": "Hungary is ready to send chemical and biological experts to Syria to support efforts to put the country's chemical weapons under international control, Minister of Foreign Affairs János Martonyi told the 68th session of the United Nations General Assembly in New York on 30 September 2013.",
+            "output": [
+                "Hungary is ready to send chemical and experts to Syria."
+            ]
+        },
+        {
+            "id": "task1355-a911ba74737d4e428768a5599c57fccc",
+            "input": "On Saturday evening, Tamar Braxton performed at the 2013 iTunes Festival in support of her new album, Love and War.",
+            "output": [
+                "Tamar Braxton performed at the 2013 iTunes Festival."
+            ]
+        },
+        {
+            "id": "task1355-ec5285a4f6e642fabd9f63abe41e65e1",
+            "input": "NASCAR unveiled a revamped penalty system Tuesday that for the first time will define specific offenses with predetermined penalties.",
+            "output": [
+                "NASCAR unveiled a revamped penalty system."
+            ]
+        },
+        {
+            "id": "task1355-3c9302b1c7e84e8e889b10af49793693",
+            "input": "Executive Director, Operations and Services of Premium Pension Limited, Mr. Kayode Akande, has said that the new pension scheme is still undersubscribed with only about six million subscribers considering the fact that about sixty million Nigerians have one form of employment or another.",
+            "output": [
+                "The new pension scheme is still undersubscribed."
+            ]
+        },
+        {
+            "id": "task1355-30e9d87310bb4ac4895aa258bb94e992",
+            "input": "Stocks to watch on the Australian stock exchange at the close on Tuesday:",
+            "output": [
+                "Stocks to watch at the close on Tuesday."
+            ]
+        },
+        {
+            "id": "task1355-b710e26c95f74576b8f8dfc5f4605d7f",
+            "input": "Michael Douglas will join Paul Rudd as Hank Pym in Ant-Man, Marvel has announced on its website.",
+            "output": [
+                "Michael Douglas will join Paul Rudd as Hank Pym in Ant-Man."
+            ]
+        },
+        {
+            "id": "task1355-41d3c7ec84bb499cb74c867d960c51d8",
+            "input": "The Mets announced that Matt Harvey underwent successful Tommy John surgery today to repair the partially torn ulnar collateral ligament in his right elbow.",
+            "output": [
+                "Matt Harvey underwent successful Tommy John surgery."
+            ]
+        },
+        {
+            "id": "task1355-58eff8dce17443d5a0feaddf555bfb2e",
+            "input": "Three Manistee County men have admitted to making homemade bottle bombs and placing them outside a residence in the City of Manistee.",
+            "output": [
+                "Three men have admitted to making bottle bombs."
+            ]
+        },
+        {
+            "id": "task1355-5e60d0b9bd224459bef8369351038c02",
+            "input": "Member countries of the Pacific Alliance signed a cooperation agreement to help combat money laundering and the financing of terrorism, according to Peru's official news...",
+            "output": [
+                "Countries of the Pacific Alliance signed a cooperation agreement to help combat money laundering."
+            ]
+        },
+        {
+            "id": "task1355-64175736ea1d4b1b8c29ee5fa284f72d",
+            "input": "Reality TV star Katie Price has been hospitalised in Europe after suffering pregnancy complications, according to a report.",
+            "output": [
+                "Katie Price has been hospitalised in Europe."
+            ]
+        },
+        {
+            "id": "task1355-ae743a48fe2441d18fa251d6ed3cb630",
+            "input": "Former Nova Scotia politician Trevor Zinck is not running in the provincial election, despite saying as recently as last month that he was planning to run in the electoral district of Dartmouth North.",
+            "output": [
+                "Politician Trevor Zinck is not running in the election."
+            ]
+        },
+        {
+            "id": "task1355-9123b6f4bc014615a7b6fc8ca3da07de",
+            "input": "Starbucks has opened its first new-style Teavana tea bar in New York City in what promises to be a game-changing event in the fast food and beverage industry.",
+            "output": [
+                "Starbucks has opened its first Teavana tea bar in New York City."
+            ]
+        },
+        {
+            "id": "task1355-e1593d22b12c4deeb3d7d65cb763adc7",
+            "input": "``I can confirm that on several occasions in the last 24 hours, Russian aircraft have entered Ukrainian airspace,'' the spokesman, Colonel Steve Warren, said.",
+            "output": [
+                "Russian aircraft have entered Ukrainian airspace."
+            ]
+        },
+        {
+            "id": "task1355-16ac0e3fd2794211ba4a61fcf577dbc2",
+            "input": "Russia held a tank biathlon -- between them, Belarus, Armenia and Kazakhstan -- and they supposedly challenged the US to one.",
+            "output": [
+                "Russia held a tank biathlon - and Belarus supposedly challenged the US to one."
+            ]
+        },
+        {
+            "id": "task1355-4de112abe0cf4b9a8a6afb546d2e7cbc",
+            "input": "The BBC is ``sleepwalking to destruction'', veteran presented Noel Edmonds said as he explained his hope to buy the corporation along with a consortium of wealthy investors.",
+            "output": [
+                "The BBC is sleepwalking to destruction, veteran presented Noel Edmonds said."
+            ]
+        },
+        {
+            "id": "task1355-01bdc422a1634e07b2fa03f5e8f09bb3",
+            "input": "Kristen Stewart, Alec Baldwin and Kate Bosworth are set to join Julianne Moore in the indie drama ``Still Alice,'' which is based on the bestselling novel of the same name by Lisa Genova, an individual familiar with the project has told TheWrap.",
+            "output": [
+                "Kristen Stewart, Alec Baldwin and Kate Bosworth are set to join Julianne Moore in the drama Still Alice."
+            ]
+        },
+        {
+            "id": "task1355-42e5757296e54a1ebf512cc952fc4664",
+            "input": "Bray Wanderers have announced plans to revolutionise the structure of the club by becoming an entirely community owned club.",
+            "output": [
+                "Bray Wanderers have announced plans to revolutionise by becoming an community owned club."
+            ]
+        },
+        {
+            "id": "task1355-8c7a2c5060e241dc8c25962e6a45f226",
+            "input": "Egyptian helicopter gunships struck suspected hideouts of Islamic militants in the northern Sinai peninsula for a second day on Sunday, part of a major offensive aiming at quelling an insurgency in the lawless region, a military official said.",
+            "output": [
+                "Egyptian helicopter gunships struck suspected hideouts of militants."
+            ]
+        },
+        {
+            "id": "task1355-9ca9cff417b5415183416f710db1de74",
+            "input": "Michael Douglas and Catherine Zeta-Jones will reportedly be celebrating their birthdays alone and miles apart from each other.",
+            "output": [
+                "Michael Douglas and Catherine Zeta-Jones will be celebrating their birthdays alone and miles apart."
+            ]
+        },
+        {
+            "id": "task1355-4b8cbfe89a5244e9955db5317ca5b214",
+            "input": "Manchester United have agreed a £35m deal to sign Sporting Lisbon midfielder William Carvalho, according to talkSPORT.",
+            "output": [
+                "Manchester United have agreed a £ 35m deal to sign Sporting Lisbon midfielder William Carvalho."
+            ]
+        },
+        {
+            "id": "task1355-0b6d31726fbc4d23a42c5d17d3ad205f",
+            "input": "A burn ban for Jefferson County was lifted Monday after enough rainfall coupled with the promise of more this week prompted County Commissioners to believe the danger of wildfires had sufficiently declined.",
+            "output": [
+                "A burn ban was lifted."
+            ]
+        },
+        {
+            "id": "task1355-97f2ecc132df4da3a24e9660d2cd0253",
+            "input": "Quantitative hedge fund manager 80 Capital has opened its Helium strategy to external investors following a 23-month trading run and the acquisition of substantial seed capital.",
+            "output": [
+                "80 Capital has opened its Helium strategy to investors."
+            ]
+        },
+        {
+            "id": "task1355-f41772842dc245c9a2098daa2c28eb54",
+            "input": "``If the state government has a problem with the Gorkhaland demand, there will come a time when we will have to ask for something else,'' said Gurung.",
+            "output": [
+                "We will have to ask for something else."
+            ]
+        },
+        {
+            "id": "task1355-d7fd264c70224fdba78a176a86cf3393",
+            "input": "Emmy-winning comedian and actress Sarah Silverman is joining the cast of season two of the acclaimed SHOWTIME drama series MASTERS OF SEX.",
+            "output": [
+                "Sarah Silverman is joining the cast of season two of the SHOWTIME MASTERS OF SEX."
+            ]
+        },
+        {
+            "id": "task1355-32d8a7ec87214939b20e631036d2a37d",
+            "input": "On October 17th several social media experts and an award winning author took to Twitter to discuss Pinterest best practices for business as over 2,000+ people followed along.",
+            "output": [
+                "Social media experts took to discuss Pinterest best practices for business."
+            ]
+        },
+        {
+            "id": "task1355-a2012ba513c84cb183d7ad954da74c9f",
+            "input": "A Waldport man was charged with first-degree rape and other sex crimes during a Linn County Circuit Court hearing Tuesday afternoon.",
+            "output": [
+                "A Waldport man was charged with rape."
+            ]
+        },
+        {
+            "id": "task1355-ae57928a06dc4c149c4107e2c38c2373",
+            "input": "Americans for Tax Reform says President Barack Obama has proposed 442 tax hikes since taking office.",
+            "output": [
+                "Barack Obama has proposed 442 tax hikes since taking office."
+            ]
+        },
+        {
+            "id": "task1355-4e98527dcdf2412a98188f078dc2d191",
+            "input": "Head of Public Affairs of the Ghana Police Service Deputy Superintendent of Police Cephas Arthur has cautioned the public to desist from giving money to the police, but check them to make sure they discharge their duties properly.",
+            "output": [
+                "Head has cautioned to desist from giving money to the police."
+            ]
+        },
+        {
+            "id": "task1355-bdc42453c87a4a13bf08d8cc3334e322",
+            "input": "Paris Hilton has filed a legal complaint against a Slovenian porn site which is showing clips from her sex tape '1 Night in Paris'.",
+            "output": [
+                "Paris Hilton has filed a complaint against a porn site."
+            ]
+        },
+        {
+            "id": "task1355-cd74b432d7e4427c89cff12f6b7858b2",
+            "input": "The Israeli navy arrested two young Gaza fishermen while they were in their boat only one mile in the sea outside Rafah, a human rights group said Thursday.",
+            "output": [
+                "The Israeli navy arrested two young Gaza fishermen."
+            ]
+        },
+        {
+            "id": "task1355-9a4cc6921a8f424bb4675050b38a1e0a",
+            "input": "A lawyer who says he was defamed by his portrayal in ``The Wolf of Wall Street'' is asking for $25 million in damages and the film removed from theaters.",
+            "output": [
+                "Who says he was defamed by his portrayal in The Wolf of Wall Street."
+            ]
+        },
+        {
+            "id": "task1355-0983c54542aa415ba4db7d4ed139596a",
+            "input": "US President Barack Obama in an interview aired Friday said Russia must ``move back'' its troops from the Ukraine border and start negotiating, AFP reported.",
+            "output": [
+                "Barack Obama said Russia must move back its troops."
+            ]
+        },
+        {
+            "id": "task1355-58e8c5aa72b84c78ae42cbf95e5a4da5",
+            "input": "Stoke scored twice in four minutes to come from behind and beat Crystal Palace 2-1 on Saturday, leaving the promoted visitors without a point after two games back in the Premier League.",
+            "output": [
+                "Stoke scored to come from behind and beat Crystal Palace 2 1."
+            ]
+        },
+        {
+            "id": "task1355-e9d59817085f4bb7b4f1cfec356976e0",
+            "input": "In what could be a disgrace to Manipur Police, the chargesheet copies of about 50 important criminal cases were found missing from various Police Stations in the State.",
+            "output": [
+                "The chargesheet copies of about 50 important cases were found missing."
+            ]
+        },
+        {
+            "id": "task1355-59d3b335484c4996afee989da9cae6cd",
+            "input": "Housing affordability improved over the June 2013 quarter, according to the Adelaide Bank/REIA Housing Affordability Report.",
+            "output": [
+                "Housing affordability improved."
+            ]
+        },
+        {
+            "id": "task1355-7a2e451a1aeb4002810a333130954872",
+            "input": "Commuter rail services in Wellington and from the Wairarapa, and the Capital Connection are set to run as normal tomorrow morning, following this afternoon's earthquake centred near Ekehatuna.",
+            "output": [
+                "Rail services, are set to run as normal tomorrow morning."
+            ]
+        },
+        {
+            "id": "task1355-9331be33b8c54e2f8c425389d3bbba7e",
+            "input": "Coal India officers called off their three-day strike midway on Friday after receiving assurances from its chairman on pay-related demands, a union leader said, ensuring little impact on production that peaks in March.",
+            "output": [
+                "Coal India officers called off their strike midway."
+            ]
+        },
+        {
+            "id": "task1355-7fbfbf86058f4c428db8abbaedac3445",
+            "input": "Four police officers fell ill after finding a drug lab inside a motel room on the NSW mid-north coast.",
+            "output": [
+                "Four police officers fell ill after finding a drug lab."
+            ]
+        },
+        {
+            "id": "task1355-3ceded8db8f14e7fb91148ebeebf4eb2",
+            "input": "American tech giant Google has acquired an American drone maker Titan Aerospace for an undisclosed sum as it seeks to bring internet connectivity to the remotest parts of the world, just weeks after Facebook announced it had acquired UK-based Ascenta at $20 million for a similar project.",
+            "output": [
+                "Google has acquired an drone maker Titan Aerospace."
+            ]
+        },
+        {
+            "id": "task1355-982a6cb9d7ee44e58c79cacbfbc6b2f2",
+            "input": "The 2014 Toyota Corolla is likely to be showcased at the 2014 Auto Expo in February according to a report from Indianautosblog.",
+            "output": [
+                "The 2014 Toyota Corolla is likely to be showcased at the 2014 Auto Expo."
+            ]
+        },
+        {
+            "id": "task1355-250eac26faf14252b40897d1a3e941de",
+            "input": "The answers below are listed on a spectrum from ``Yes, foreign policy should be determined by its impact on Christians,'' to ``No, it shouldn't be.''",
+            "output": [
+                "The answers are listed from, foreign policy should be determined by its impact on Christians."
+            ]
+        },
+        {
+            "id": "task1355-80107b1fa65a44b281965ec8b5812657",
+            "input": "Aretha Franklin celebrated her birthday a few days early Saturday night in New York City.",
+            "output": [
+                "Aretha Franklin celebrated her birthday in New York City."
+            ]
+        },
+        {
+            "id": "task1355-a595f733887b4b1ea112777bfa4c8def",
+            "input": "A laser pyramid, hot tubs at Portage & Main on New Year's Day and evergreens along major city streets would all enhance the city's image, Thompson told a Winnipeg Chamber of Commerce audience during a 30-minute speech today.",
+            "output": [
+                "A laser pyramid, hot tubs on New Year's Day and evergreens would enhance the city's image, Thompson told."
+            ]
+        },
+        {
+            "id": "task1355-1dd305c167cb466ebf1283f959375b27",
+            "input": "NEW DELHI The Supreme Court on Thursday said it will continue to monitor the probe into the Muzaffarnagar riots and relief and rehabilitation work in violence-hit areas till the end and asked the government of Uttar Pradesh to file report on steps taken by it.",
+            "output": [
+                "Supreme Court will continue to monitor the probe into the Muzaffarnagar riots and work in areas till the end."
+            ]
+        },
+        {
+            "id": "task1355-930f9992a11d44b5a870137ec9b770f6",
+            "input": "Large-scale compounding pharmacies may soon be subject to FDA regulations under a new federal law, according to NBC News.",
+            "output": [
+                "Compounding pharmacies may be subject to FDA regulations."
+            ]
+        },
+        {
+            "id": "task1355-2ab4a792ffaa44cf8f0cb51e01aa01dd",
+            "input": "A veteran community educator has been appointed interim president of Los Angeles Southwest College as the new fall semester gets under way.",
+            "output": [
+                "A veteran educator has been appointed interim president of Los Angeles Southwest College."
+            ]
+        },
+        {
+            "id": "task1355-a6616c1ddbad4419819d7f3e545c19f5",
+            "input": "Slovenian flag carrier Adria Airways has signed a code share agreement with Air Serbia, under which the Serbian airline will have the exclusive right for the Ljubljana-Belgrade route.",
+            "output": [
+                "Slovenian flag carrier Adria Airways has signed a code share agreement with Air Serbia."
+            ]
+        },
+        {
+            "id": "task1355-44527f9fc9bb47c79b4d93dcec9d5371",
+            "input": "Emergent BioSolutions Inc. is planning to open a new Michigan facility to expand production of its BioThrax anthrax vaccine.",
+            "output": [
+                "Emergent BioSolutions Inc. is planning to open a new facility."
+            ]
+        },
+        {
+            "id": "task1355-2c318e9b636a4d05855f2567aaa502d7",
+            "input": "Anti-government protesters blocked voting in dozens of constituencies in tense Thai elections Sunday overshadowed by pre-poll bloodshed, an opposition boycott and fears of protracted political limbo.",
+            "output": [
+                "Protesters blocked voting in tense Thai elections."
+            ]
+        },
+        {
+            "id": "task1355-3bed3a01f59942eaad0dc88308520e35",
+            "input": "Verint Systems is a data analysis and security company that is acquiring KANA Software for $514 million in cash.",
+            "output": [
+                "Verint Systems is acquiring KANA Software for $ 514 million."
+            ]
+        },
+        {
+            "id": "task1355-dd7b415015e5482dbd87742c5403aa6e",
+            "input": "As a precautionary action due to possible ice and snow, the College of Charleston is canceling all classes, labs and activities for Tuesday, January 28.",
+            "output": [
+                "The College of Charleston is canceling all classes, labs for Tuesday."
+            ]
+        },
+        {
+            "id": "task1355-96419aca17cf4cb8b1bc78aa5ceb1a81",
+            "input": "Rain stopped play in the post-lunch session of the fourth and penultimate day in the second and final cricket Test between India and South Africa in Durban on Sunday.",
+            "output": [
+                "Rain stopped play in the post-lunch session."
+            ]
+        },
+        {
+            "id": "task1355-cb0942c679214e2091f659635834bd4c",
+            "input": "Crews worked throughout Monday afternoon to contain a fire at a west Little Rock apartment complex that started just before 1 pm",
+            "output": [
+                "Crews worked to contain a fire at a west Little Rock apartment complex."
+            ]
+        },
+        {
+            "id": "task1355-b83c06cb95fd4972a504eb1714e12486",
+            "input": "If you work in the creative industries, then you'll know only too well that the client is always right.",
+            "output": [
+                "The client is always right."
+            ]
+        },
+        {
+            "id": "task1355-24ee767482094c68bd8d1e281206e280",
+            "input": "Haggen is recalled ground beef after a supplier announced that a sample tested positive for a strain of E. coli.",
+            "output": [
+                "Haggen is recalled ground beef."
+            ]
+        },
+        {
+            "id": "task1355-e57b909094d1442d815439273eed3723",
+            "input": "Reports in Russia are claiming that Guus Hiddink has resigned as manager of FC Anzhi Makhachkala.",
+            "output": [
+                "Guus Hiddink has resigned as manager of FC Anzhi Makhachkala."
+            ]
+        },
+        {
+            "id": "task1355-93a3862191e74ac59ed9ea6217eeb9c7",
+            "input": "A Keene woman faces two simple assault charges, accused of fighting with her mother Saturday night.",
+            "output": [
+                "A Keene woman faces two assault charges."
+            ]
+        },
+        {
+            "id": "task1355-ef1b606bbca542cbbb6c1a689785c1ce",
+            "input": "Olympic Steel, Inc a leading national metals service center announced several management promotions to support the Company's strategic growth.",
+            "output": [
+                "Olympic Steel, Inc a center announced management promotions."
+            ]
+        },
+        {
+            "id": "task1355-2528eca486bd4bb28305922f9782a983",
+            "input": "Derek Jeter will retire after the 2014 season, he announced in a lengthy letter posted on Facebook Wednesday.",
+            "output": [
+                "Derek Jeter will retire after the 2014 season."
+            ]
+        },
+        {
+            "id": "task1355-31fb017a8744445688c14a2413ecd72f",
+            "input": "A faster way to compare car insurance quotes online from multiple providers now exists at http://quotespros.com/auto-insurance.",
+            "output": [
+                "A way to compare car insurance quotes online exists."
+            ]
+        },
+        {
+            "id": "task1355-0515cdc6eba5428cb99b4598ac4cd5f7",
+            "input": "Not just Shahid, she has been partying with another former flame, Harman Baweja as well.",
+            "output": [
+                "She has been partying with another flame, Harman Baweja."
+            ]
+        },
+        {
+            "id": "task1355-549e52a02ab5409c8e9802949becebca",
+            "input": "Alyssa Milano revealed Friday that she and husband David Bugliari are expecting their second child.",
+            "output": [
+                "Alyssa Milano and David Bugliari are expecting their second child."
+            ]
+        },
+        {
+            "id": "task1355-c8a60217cc614b599220d6a03dcd5d04",
+            "input": "Chief Secretary to the treasury Danny Alexander paid a visit to Sutton to see some of the pioneering cancer research taking place in the borough.",
+            "output": [
+                "Danny Alexander paid a visit to Sutton."
+            ]
+        },
+        {
+            "id": "task1355-8ce0f3a889ab4462903a684029b6b4c5",
+            "input": "Today, California Governor Jerry Brown signed SB 493, the pharmacist provider status legislation.",
+            "output": [
+                "Jerry Brown signed SB 493."
+            ]
+        },
+        {
+            "id": "task1355-a30c430afa664a47ad82261cdad273fe",
+            "input": "The All Star teams on The Amazing Race 2014 sure made each other work last night on The Amazing Race 24, as it was a race to the finish line to find out both the winner and the loser of this leg of the race, so who went home on Amazing Race All Stars 2014 last night?",
+            "output": [
+                "The teams made last night so who went home on Amazing Race All Stars 2014."
+            ]
+        },
+        {
+            "id": "task1355-15e3bfd4c3584788bc52d05e5788303e",
+            "input": "The MMD in Chinsali has called for reconciliation and unity in the party so that the party can go back to its glory days.",
+            "output": [
+                "The MMD in Chinsali has called for reconciliation and unity in the party."
+            ]
+        },
+        {
+            "id": "task1355-51c29c6b165a4843b016f760f522e0f5",
+            "input": "Jesse McCartney steps out in Hollywood wearing a onesie and man Uggs on March 26, in Hollywood.",
+            "output": [
+                "Jesse McCartney steps out in Hollywood wearing a onesie and man Uggs."
+            ]
+        },
+        {
+            "id": "task1355-c71b41528f68456a8f1a36e3940801b4",
+            "input": "A minor Australian party contesting the September 7 elections has launched a campaign to ban burqa, saying the full Islamic veil promotes the segregation of Muslims in the country.",
+            "output": [
+                "A Australian party has launched a campaign to ban burqa."
+            ]
+        },
+        {
+            "id": "task1355-2465cb9936f94f1984d44705ba6e0de7",
+            "input": "A man in his 40s is fighting for his life in hospital after falling from a moving car.",
+            "output": [
+                "A man is fighting for his life after falling from a moving car."
+            ]
+        },
+        {
+            "id": "task1355-52bf6c42a43c4cd49b4a1fb16c55fd2c",
+            "input": "A bag recovered last week from inside the cover of a gas main tested positive for ricin, investigators tell NBC10.com.",
+            "output": [
+                "A bag tested positive for ricin."
+            ]
+        },
+        {
+            "id": "task1355-6732f61a7c454a6097effad67543e778",
+            "input": "Federal prosecutors say a former CEO accused of defrauding hospitals in Wyoming and Indiana was apparently able use a stolen passport to flee to Thailand.",
+            "output": [
+                "A former CEO accused of defrauding in Wyoming and Indiana was apparently use a stolen passport to flee."
+            ]
+        },
+        {
+            "id": "task1355-d0b0933a42dd4b3ea3064f3c89386492",
+            "input": "It is still possible to get hold of a PS4 before Christmas, but only if you order a bundle, Amazon.co.uk has revealed.",
+            "output": [
+                "It is still to get hold of a PS4 before Christmas."
+            ]
+        },
+        {
+            "id": "task1355-a14ceefbe16246f4ac9f0f7a4328df5e",
+            "input": "Tree and shrub transplanting permits are now available for purchase at Shoshone National Forest district offices.",
+            "output": [
+                "Transplanting permits are available."
+            ]
+        },
+        {
+            "id": "task1355-a05142ece5954d66bac9187f75d7797d",
+            "input": "Gwyneth Paltrow will reportedly tour with Coldplay later this year.",
+            "output": [
+                "Gwyneth Paltrow will tour with Coldplay."
+            ]
+        },
+        {
+            "id": "task1355-b10d1f84973040e59a13b6e4df37e628",
+            "input": "ITV is launching a new channel aimed at young women, with shows including The Only Way Is Essex.",
+            "output": [
+                "ITV is launching a channel aimed at women."
+            ]
+        },
+        {
+            "id": "task1355-a518fae97d2841a9a359337ae52efa2e",
+            "input": "Cleveland Indians pitcher Justin Masterson is beginning to settle in with his pitches.",
+            "output": [
+                "Justin Masterson is beginning to settle in."
+            ]
+        },
+        {
+            "id": "task1355-e0ffedbe15044fd7b120c7e29db87fe4",
+            "input": "In a statement released today, the Giants said they met with Martin at the request of his manager, Ralf Carr, and have decided not to pursue him in the forthcoming trade period.",
+            "output": [
+                "The Giants said they met with Martin."
+            ]
+        },
+        {
+            "id": "task1355-08d4af419a9c4add9441370e68e3eca3",
+            "input": "France-based video site Dailymotion has opened a new Japanese office to tap in on local advertising growth.",
+            "output": [
+                "Dailymotion has opened a Japanese office."
+            ]
+        },
+        {
+            "id": "task1355-2e206030d6674462b0a9e7be401ca840",
+            "input": "iPhone maker, Apple, is accused of hiding its profits once again.",
+            "output": [
+                "Maker, Apple, is accused of hiding its profits again."
+            ]
+        },
+        {
+            "id": "task1355-b679758290e74df2ad1692713edd3cef",
+            "input": "Teen pop star Justin Bieber was reportedly attacked at a Toronto nightclub by a guest in the club.",
+            "output": [
+                "Justin Bieber was attacked at a Toronto nightclub."
+            ]
+        },
+        {
+            "id": "task1355-a5a0802d2a5a445ca0f3d5b9ecaed19c",
+            "input": "Feedback on ``'I can't kiss you on the lips': Little talk of Seanad as Gerry Adams canvasses in Dublin ''.",
+            "output": [
+                "Feedback on I can't kiss on the lips."
+            ]
+        },
+        {
+            "id": "task1355-b61dc4a1219643e1a6055ca61393d618",
+            "input": "Barack Obama has called for the release of an American pastor imprisoned in Iran, reports state.",
+            "output": [
+                "Barack Obama has called for the release of an American pastor imprisoned in Iran."
+            ]
+        },
+        {
+            "id": "task1355-dd904c5a452f4c679cf20c7d148258db",
+            "input": "A former Shawnee County employee has filed a wrongful termination lawsuit against the county, claiming at least $75,000 in damages.",
+            "output": [
+                "A former Shawnee County employee has filed a wrongful termination lawsuit."
+            ]
+        },
+        {
+            "id": "task1355-42011bb06622468999fbb3142cb597b4",
+            "input": "General Motors announced that it's recalling some 370,000 trucks in North America because of a fire risk.",
+            "output": [
+                "General Motors's recalling some 370,000 trucks because of a fire risk."
+            ]
+        },
+        {
+            "id": "task1355-2cea5f3b016a47da98e99f2c66a20305",
+            "input": "John Abraham has been prohibited from using the title Hamara Bajaj for his home production.",
+            "output": [
+                "John Abraham has been prohibited from using the title Hamara Bajaj."
+            ]
+        },
+        {
+            "id": "task1355-638631317ca44bd087ec7e5484bbac44",
+            "input": "A Stillwater man was arrested on suspicion of fifth-degree domestic assault and gross misdemeanor domestic assault Dec. 14.",
+            "output": [
+                "A Stillwater man was arrested on suspicion of domestic assault."
+            ]
+        },
+        {
+            "id": "task1355-17fc7b307cf54684ad6a0f1feadc8fe9",
+            "input": "Solar financing company Sunrun acquired a residential solar business that will expand its reach in the booming California solar market.",
+            "output": [
+                "Sunrun acquired a business that will expand its reach in the California market."
+            ]
+        },
+        {
+            "id": "task1355-e25647574ff440fabd40e64f1e4927cc",
+            "input": "Brandeis University researchers have unlocked a controversial structure in heart cells responsible for regulating heart contractions.",
+            "output": [
+                "Researchers have unlocked a controversial structure in heart cells."
+            ]
+        },
+        {
+            "id": "task1355-0f2120fe03a6461eac3d153174ecfc3c",
+            "input": "I think it's in my head, curated by renowned artist duo, the TM Sisters, also known as Monica and Natasha Lopez de Victoria, have examined and culled nearly 50 pieces of art from the club's massive private collection.",
+            "output": [
+                "I think it's in my head."
+            ]
+        },
+        {
+            "id": "task1355-17dcdbc289184fbc9ed39ce2426d00e3",
+            "input": "Australian Daniel Ricciardo will replace compatriot Mark Webber at Formula One world champions Red Bull next year, the team announced on Monday.",
+            "output": [
+                "Daniel Ricciardo will replace Mark Webber Red Bull year."
+            ]
+        },
+        {
+            "id": "task1355-852a031b1c95410bb20591447eee7676",
+            "input": "The state Department of Fish and Wildlife says razor clam digging on Washington's beaches begins Wednesday.",
+            "output": [
+                "Razor clam digging begins Wednesday."
+            ]
+        },
+        {
+            "id": "task1355-68110006353b49b8855d45b2d45ae81b",
+            "input": "Academy Award winner Jessica Lange, who stars on the television series ``American Horror Story,'' has been cast in the upcoming film remake of ``The Gambler,'' according to Deadline.com.",
+            "output": [
+                "Jessica Lange, who stars, has been cast in the film remake of The Gambler."
+            ]
+        },
+        {
+            "id": "task1355-c0a10a25702c4b26b844c49c2c1263b4",
+            "input": "A Waianae man was arrested for allegedly shooting his neighbor's cat with a pellet gun.",
+            "output": [
+                "A Waianae man was arrested for allegedly shooting his neighbor's cat."
+            ]
+        },
+        {
+            "id": "task1355-9505733478e84781826582f434e8bbc0",
+            "input": "Danone, the owner of Evian bottled water and Activia yogurt, reported second-quarter sales growth that beat estimates as the company sold more baby-nutrition products in China and dairy sales rose more than forecast.",
+            "output": [
+                "Danone reported sales growth that beat estimates."
+            ]
+        },
+        {
+            "id": "task1355-83ae919be5774becb81da0f32fd0d0be",
+            "input": "For the first time Queensland police have targeted a recreational motorcycle club under the Newman government's controversial anti-association laws.",
+            "output": [
+                "Police have targeted a recreational motorcycle club."
+            ]
+        },
+        {
+            "id": "task1355-b2c27372a38044598a465a2f5e6ddcf1",
+            "input": "Similar to margin financing in equity markets, the nonbanking finance arms of brokers gave loans to wealthy clients to play on NSEL.",
+            "output": [
+                "The arms of brokers gave loans to clients to play on NSEL."
+            ]
+        },
+        {
+            "id": "task1355-f945a48ff4f04b809f5bd1b397aea837",
+            "input": "In official documents released earlier this month it appears the Queen of England used the wrong name for the Republic of Ireland when writing to president Patrick Hillery.",
+            "output": [
+                "The Queen of England used the wrong name for the Republic of Ireland."
+            ]
+        },
+        {
+            "id": "task1355-affe44ba40b54d4f97e3407b8d03e44d",
+            "input": "Secretary of State John Kerry delivers remarks on Syria at the Department of State in Washington, DC, on August 26, 2013.",
+            "output": [
+                "Secretary of State John Kerry delivers remarks on Syria."
+            ]
+        },
+        {
+            "id": "task1355-5482a3b19b4548b8adbb08290a47848c",
+            "input": "Los Angeles, Supermodel Miranda Kerr, who has split from Orlando Bloom, says she wants to ``explore'' her bisexuality.",
+            "output": [
+                "Miranda Kerr wants to explore her bisexuality."
+            ]
+        },
+        {
+            "id": "task1355-5340016a78884277a79521bdb65410a6",
+            "input": "As we had mentioned in our earlier story, the Renault Fluence facelift is just around the corner and we spotted one of the facelift versions in a stockyard.",
+            "output": [
+                "The Renault Fluence facelift is and we spotted."
+            ]
+        },
+        {
+            "id": "task1355-c6593eb7d90349579d86af9a7d8f2ea3",
+            "input": "Craven Council's legal team -- which last year prosecuted benefit cheats who made more than £160,000 in bogus claims -- is facing the axe.",
+            "output": [
+                "Craven Council's legal team - year prosecuted benefit cheats - is facing the axe."
+            ]
+        },
+        {
+            "id": "task1355-3390d363170b4caca0781b5a11035908",
+            "input": "He also noted that there was no plan by the federal government to sell off any of the refineries owned by the country.",
+            "output": [
+                "There was no plan by the federal government to sell off any of the refineries."
+            ]
+        },
+        {
+            "id": "task1355-95e5dad86d78441dbc2f94f9c039f976",
+            "input": "- Security software maker Palo Alto Networks's quarterly revenue jumped 49 percent as subscriptions rose, sending its shares up 8 percent in extended trading.",
+            "output": [
+                "Security software maker Networks's revenue jumped as subscriptions rose."
+            ]
+        },
+        {
+            "id": "task1355-af59f98bfa7b43f2b8b86b9904a892ef",
+            "input": "The Hunger Games actor shares, ``Maybe I could say right now I'm 100% straight. But who knows? In af*cking year, I could meet a guy and be like, Whoa, I'm attracted to this person.''",
+            "output": [
+                "The shares, I could say right now I 'm 100% straight."
+            ]
+        },
+        {
+            "id": "task1355-1850c89c460b40ab90e3822a11c286ac",
+            "input": "SOUTH Lakes MP Tim Farron has introduced a bill in the House of Commons to 'democratise' national parks.",
+            "output": [
+                "Tim Farron has introduced a bill to democratise national parks."
+            ]
+        },
+        {
+            "id": "task1355-30d3098c23d147539d61a85ae2b98966",
+            "input": "Antonia Bird, one of Britain's leading female film and TV directors, has died of cancer aged 52.",
+            "output": [
+                "Antonia Bird, one, has died of cancer aged 52."
+            ]
+        },
+        {
+            "id": "task1355-3abefeadb37a438fbc157c799b28855e",
+            "input": "Operation Elveden: a former Surrey police officer is to be charged over allegations he took payments for stories.",
+            "output": [
+                "Operation Elveden : a former Surrey police officer is to be charged."
+            ]
+        },
+        {
+            "id": "task1355-f28ad42bad3548b088e20ab1ab96eab3",
+            "input": "LaReahn Washington and Jeanette Jackson combined for 42 points, helping Prairie View upset Texas Southern 63-58 Saturday for the SWAC title and an NCAA tournament berth.",
+            "output": [
+                "Prairie View upset Texas Southern 63 58 for the SWAC title and an NCAA tournament berth."
+            ]
+        },
+        {
+            "id": "task1355-116d891565394b6499cf7c87e3590b10",
+            "input": "British actor Ian McKellen announced on Facebook he officiated the wedding of his longtime friend Patrick Stewart and girlfriend Sunny Ozell.",
+            "output": [
+                "Ian McKellen officiated the wedding of his friend Patrick Stewart and Sunny Ozell."
+            ]
+        },
+        {
+            "id": "task1355-fb0b6725d2974899a923011ed2b6f82a",
+            "input": "A middle-aged man was arrested for rape bid on a minor in Juhi late on Friday night.",
+            "output": [
+                "A man was arrested for rape bid on a minor."
+            ]
+        },
+        {
+            "id": "task1355-65ad64e4461b4829a6560f47ea3a5757",
+            "input": "In a significant development that will make environmentalists and residents happy, the Public Accounts Committee of the Kerala Assembly has recommended that autorickshaws plying in the city should mandatorily switch to LNG as fuel.",
+            "output": [
+                "Autorickshaws should switch to LNG."
+            ]
+        },
+        {
+            "id": "task1355-d2751cb8f04140088af14f4f69083d9b",
+            "input": "St. Ambrose hosts No. 21 Ashford in mens basketball, Saturday, February 15, 2014, at Lee Lohman Arena in Davenport.",
+            "output": [
+                "St. Ambrose hosts Ashford."
+            ]
+        },
+        {
+            "id": "task1355-fc8fcb8c57f74649b2519a3469963306",
+            "input": "Engineering students with bad handwriting may end up getting zero marks, according to a Mumbai University circular.",
+            "output": [
+                "Engineering students with bad handwriting may end up getting zero marks."
+            ]
+        },
+        {
+            "id": "task1355-6ddb67399cde408c93af8558540019cb",
+            "input": "The City of Tulsa is cracking down on residents who park on grass, even if is your own front yard.",
+            "output": [
+                "The City of Tulsa is cracking down on residents who park on grass."
+            ]
+        },
+        {
+            "id": "task1355-e19a08708efc41fb8129d0c2caf4647a",
+            "input": "People living close to Nullah Leh shifted to safer places and transferred their household items from their houses on Tuesday.",
+            "output": [
+                "People shifted to safer places."
+            ]
+        },
+        {
+            "id": "task1355-cb46bc95550b4cebabeeebea8b9eb671",
+            "input": "Plug Power Inc., a leader in providing clean, reliable energy solutions, today confirms its upcoming conference call and investor conference schedule.",
+            "output": [
+                "Plug Power Inc, today confirms its upcoming conference call and investor conference schedule."
+            ]
+        },
+        {
+            "id": "task1355-7109e81ac1c44ab78d2b91a1b77eea85",
+            "input": "The World Sikh Organization of Canada has offered its congratulations to the Parti libéral du Québec for its resounding win in tonight's provincial election.",
+            "output": [
+                "The World Sikh Organization of Canada has offered its congratulations to the Parti libéral du Québec."
+            ]
+        },
+        {
+            "id": "task1355-85308b4786a64aa58f58de4bdad1b584",
+            "input": "Cleveland Browns wide receiver Davone Bess was arrested for assaulting an officer/firefighter on Friday morning, South Florida TV station WBFS reported.",
+            "output": [
+                "Cleveland Browns wide receiver Davone Bess was arrested for assaulting."
+            ]
+        },
+        {
+            "id": "task1355-47c45adcf0474facb07214c42b3439a7",
+            "input": "MHRA issued a precautionary recall of 16 different prescription medicines made by Wockhardt at its Waluj site in India because MHRA identified manufacturing deficiencies during an inspection and noted that the medicines have not been manufactured to GMP standards.",
+            "output": [
+                "MHRA issued a recall of 16 medicines made by Wockhardt at its Waluj site."
+            ]
+        },
+        {
+            "id": "task1355-a2c38c5d75b8412887b653c4894877e1",
+            "input": "Aamir Khan, one of Bollywood's top stars who is set for the release of his ``Dhoom 3'', doesn't believe that rivals can't be friends.",
+            "output": [
+                "Rivals can't be friends."
+            ]
+        },
+        {
+            "id": "task1355-c8f2a349da38466b99d7e264e5e08e01",
+            "input": "Vishal Kapoor, General Manager Wealth Management at Standard Chartered Bank, said that this is the good time to invest in equities.",
+            "output": [
+                "This is the good time to invest in equities."
+            ]
+        },
+        {
+            "id": "task1355-ef63d7aa03b24b47b16b7081ccc70140",
+            "input": "Lewis Hamilton hailed Formula One rival Sebastian Vettel as a great champion yesterday, only days after suggesting the German's dominance was sending fans to sleep.",
+            "output": [
+                "Lewis Hamilton hailed Sebastian Vettel as a great champion."
+            ]
+        },
+        {
+            "id": "task1355-42796a2654d64ece96a81fb639ceae7e",
+            "input": "French energy giant Total will return to Iran, if international sanctions are lifted on petroleum exports, chief executive Christophe de Margerie said at an industry conference here on Tuesday, AFP news agency reported.",
+            "output": [
+                "Total will return to Iran, if sanctions are lifted."
+            ]
+        },
+        {
+            "id": "task1355-0feba083b92a446c9a276e00ca322159",
+            "input": "Former state Rep. Thad Viers pleaded guilty in court on Wednesday to a harassment charge stemming from several incidents with his ex-girlfriend.",
+            "output": [
+                "Former state Rep. Thad Viers pleaded guilty to a harassment charge."
+            ]
+        },
+        {
+            "id": "task1355-5a853a326bff4c2e8619e8a230333273",
+            "input": "Ambuja Cements reported a 6.6% increase in net profit for the quarter ended 31 March.",
+            "output": [
+                "Ambuja Cements reported a 6.6% increase in profit."
+            ]
+        },
+        {
+            "id": "task1355-4da7f61c8d274ef695da6ce53c82190d",
+            "input": "THE US Securities and Exchange Commission has filed civil charges against Steven A. Cohen that accused the billionaire hedge-fund manager of failing to prevent insider trading.",
+            "output": [
+                "THE US Securities and Exchange Commission has filed charges against Steven A. Cohen."
+            ]
+        },
+        {
+            "id": "task1355-14c7fe91cdbd4d02aef3cc77b0526223",
+            "input": "A man sleeping in a dumpster was thrown into a truck and nearly crushed by a compactor.",
+            "output": [
+                "A man sleeping in a dumpster was thrown into a truck and nearly crushed."
+            ]
+        },
+        {
+            "id": "task1355-76181a3aeb5842f69d0d57d507f8260a",
+            "input": "A dog has died after being shot outside a Scarborough home early Sunday morning.",
+            "output": [
+                "A dog has died after being shot outside a Scarborough home."
+            ]
+        },
+        {
+            "id": "task1355-581bdbe6006540af9b406c470a5733a9",
+            "input": "Water distribution system repairs will occur Monday, Nov. 25, in the city of Urbana, causing water disruptions for some city of Urbana water customers.",
+            "output": [
+                "Water distribution system repairs will occur Monday, Nov. 25."
+            ]
+        },
+        {
+            "id": "task1355-fb7070eb98cb4d5480b732bb8e803b15",
+            "input": "Calgary-based Shaw Communications plans to lay off 400 employees in order to streamline their cable, satellite, Internet and home phone services into two units for consumers and businesses.",
+            "output": [
+                "Shaw Communications plans to lay off 400 employees."
+            ]
+        },
+        {
+            "id": "task1355-f206bacf95574fa29e65f836f1dccc06",
+            "input": "Meridian Township has selected an artist to create a commissioned public art sculpture in downtown Okemos.",
+            "output": [
+                "Meridian Township has selected an artist to create a public art sculpture."
+            ]
+        },
+        {
+            "id": "task1355-f98a1553b55a4ea194671bfcdaea47af",
+            "input": "Yohan Cabaye is left out of the Newcastle United squad for Wednesday's Capital One Cup tie at Morecambe.",
+            "output": [
+                "Yohan Cabaye is left out of the Newcastle United squad."
+            ]
+        },
+        {
+            "id": "task1355-7c634972011b4cf690cce55278bcfe2e",
+            "input": "Over 500 people were killed in political violence in Bangladesh in 2013, making it the worst year since independence.",
+            "output": [
+                "Over 500 people were killed in political violence in Bangladesh in 2013."
+            ]
+        },
+        {
+            "id": "task1355-812ed24f45074bc3a47a13c990485118",
+            "input": "DA launched the party's second ``Ayisafani'' TV advert in Mamelodi on Monday.",
+            "output": [
+                "DA launched the party's second Ayisafani TV advert."
+            ]
+        },
+        {
+            "id": "task1355-0aabb526a6c94733b833114123a86625",
+            "input": "POLICE are appealing for information after two boys were approached by a man in a car at Tweed Heads over the weekend.",
+            "output": [
+                "POLICE are appealing after two boys were approached at Tweed Heads."
+            ]
+        },
+        {
+            "id": "task1355-817d9e99e8ca49698a088edf667ceb5e",
+            "input": "FLIR Systems, Inc. today announced that it is realigning multiple production and engineering organizations and streamlining its global operations in order to better position FLIR ® to develop, produce and market products more quickly and cost-effectively.",
+            "output": [
+                "FLIR Systems Inc. is realigning and streamlining its global operations."
+            ]
+        },
+        {
+            "id": "task1355-2b85890c07a7442aa3aa65a59d74f653",
+            "input": "Sony has finally announced that voice recognition will indeed be enabled on the PS4 and will work via the PlayStation Camera.",
+            "output": [
+                "Voice recognition will be enabled on the PS4 and will work via the PlayStation Camera."
+            ]
+        },
+        {
+            "id": "task1355-644a5a1fe11b461db90417208f6416ca",
+            "input": "Alliant Energy Corp. said Thursday that with higher than expected sales of electricity and natural gas so far this year, it is raising the company's earnings expectations for 2013.",
+            "output": [
+                "Alliant Energy Corp. is raising the company's earnings expectations."
+            ]
+        },
+        {
+            "id": "task1355-5383a73c1dc44e0f8776243295c8256b",
+            "input": "Lawson really want to get Rita Ora in their next music video, but are afraid of ``p***ing off'' her boyfriend Calvin Harris.",
+            "output": [
+                "Lawson want to get Rita Ora in their next video."
+            ]
+        },
+        {
+            "id": "task1355-f9c8c871fc5047289205dde597a00d48",
+            "input": "Superior Spider-Man appears in LEGO Marvel Super Heroes and is quickly dispatched by the original Spidey.",
+            "output": [
+                "Superior Spider-Man appears in LEGO Marvel Super Heroes."
+            ]
+        },
+        {
+            "id": "task1355-c7ce68e48ad94b788026e44e960c85d7",
+            "input": "Bill Kristol, the editor and publisher of The Weekly Standard, has joined ABC News as a contributor, ``This Week'' host George Stephanopoulos announced on Sunday.",
+            "output": [
+                "Bill Kristol has joined ABC News."
+            ]
+        },
+        {
+            "id": "task1355-8da81e690ef14c05a0386e5f75bbfff3",
+            "input": "The Archbishop of Canterbury has arrived in Burundi for the start of a five-day tour meeting bishops of the Anglican church.",
+            "output": [
+                "The Archbishop has arrived in Burundi."
+            ]
+        },
+        {
+            "id": "task1355-f766ce120aac4fd2b9c4efd4e757fc67",
+            "input": "Facebook has agreed to buy WhatsApp for 19bn dollars in cash and stock, the world's biggest social network has announced.",
+            "output": [
+                "Facebook has agreed to buy WhatsApp for 19bn dollars."
+            ]
+        },
+        {
+            "id": "task1355-757501a54ac948b6b1d9bd15dac88d4f",
+            "input": "Casey Anthony has reached a settlement in her bankruptcy case with a Texas search group that helped look for her missing 2-year-old daughter.",
+            "output": [
+                "Casey Anthony has reached a settlement."
+            ]
+        },
+        {
+            "id": "task1355-2eb505685c364d55813d50c24280ee36",
+            "input": "Will Arnett may be starring in CBS' The Millers this fall, but he's still open to returning to Arrested Development.",
+            "output": [
+                "Will Arnett may be starring, but he's open to returning to Arrested Development."
+            ]
+        },
+        {
+            "id": "task1355-4454e79be2524c3da51a8c8e9c567644",
+            "input": "Veteran Bollywood cinematographer VK Murthy, whom many regarded as the light of late film director Guru Dutt's cinema, has passed away in Bangalore.",
+            "output": [
+                "Veteran Bollywood cinematographer VK Murthy has passed away."
+            ]
+        },
+        {
+            "id": "task1355-66ce00849dae4da8b7d2a04d44cd15cd",
+            "input": "Force India have adopted a ``fierce new look'' ahead of what co-owner Vijay Mallya is hoping will be their best year in the team's history.",
+            "output": [
+                "Force India have adopted a fierce new look."
+            ]
+        },
+        {
+            "id": "task1355-d55f01ff4afb43e4906acbf995821366",
+            "input": "After losses for the Congress party in the recent assembly elections, the UPA government may do a rethink on the scheduled monthly 50 paise a litre hike in diesel rates, Nomura Equity Research has said.",
+            "output": [
+                "The government may do a rethink on the monthly 50 paise a hike in diesel rates."
+            ]
+        },
+        {
+            "id": "task1355-48b0f66ce2994e40b4208eec8be34414",
+            "input": "A woman was shot in the leg in an Outer Mission supermarket parking lot on Wednesday, police said.",
+            "output": [
+                "A woman was shot in the leg in an Outer Mission supermarket parking lot."
+            ]
+        },
+        {
+            "id": "task1355-951dd8c20cc743d28a3d1d847095c6ee",
+            "input": "A former Keyser woman was charged with trespassing and other violations following a disturbance Thursday night on North Main Street.",
+            "output": [
+                "A former Keyser woman was charged with trespassing."
+            ]
+        },
+        {
+            "id": "task1355-16e0d1f7de4b4570b70cbff249142081",
+            "input": "Attacks including a car bomb near a cafe and another at a police station killed 22 people in Iraq on Monday, as the country struggles to curb rampant violence.",
+            "output": [
+                "Attacks including a car bomb killed 22 people in Iraq."
+            ]
+        },
+        {
+            "id": "task1355-3ad087d55f404c78ad4ce074acce5395",
+            "input": "Shoji, the winningest coach in NCAA division I women's volleyball history at 1,129-190-1, posted on his Twitter account early this morning ``Announcing that I am returning for 40th season in 2014, Go bows!''",
+            "output": [
+                "Shoji am returning for 40th season."
+            ]
+        },
+        {
+            "id": "task1355-dbd9d412900a4eebabfff465321e6eff",
+            "input": "An IAF microlite aircraft had to make an emergency landing in a park near Shastri Park metro station in east Delhi on Sunday.",
+            "output": [
+                "An IAF microlite aircraft had to make an emergency landing in a park."
+            ]
+        },
+        {
+            "id": "task1355-351360ce942e478480ef247170344eed",
+            "input": "PAG, the Asian private equity and investment firm, has made its first corporate investment in Japan, taking a $250m stake in Universal Studios Japan.",
+            "output": [
+                "PAG has made, taking a stake in Universal Studios Japan."
+            ]
+        },
+        {
+            "id": "task1355-470af6da36de497b8328d5f453d050dc",
+            "input": "A 46-year-old man has died after being struck by a vehicle in Regina.",
+            "output": [
+                "A man has died after being struck by a vehicle."
+            ]
+        },
+        {
+            "id": "task1355-c196c4072daa4cc9a519d7f05c211a0c",
+            "input": "A Sunday night Sparkill, NY fire, sparked by a space heater, damaged two buildings and put two families and some 21 people out into the cold.",
+            "output": [
+                "Sparkill, fire, sparked by a space heater, damaged."
+            ]
+        },
+        {
+            "id": "task1355-703f42e91ed34b588fd064b10b01ecb3",
+            "input": "David Ross, former manager of Ross Asset Management, pleaded guilty to five charges laid by the Serious Fraud Office and three charges by the Financial Markets Authority in the Wellington District Court and has been remanded in custody.",
+            "output": [
+                "David Ross pleaded guilty to five charges and has been remanded in custody."
+            ]
+        },
+        {
+            "id": "task1355-2c715aff65034504b15663faa38e8ba1",
+            "input": "Chris Weidman defended his UFC middleweight title when Anderson Silva apparently broke his left leg on a kick in the second round, ending UFC 168 with a horrific injury Saturday night.",
+            "output": [
+                "Chris Weidman defended his UFC middleweight title."
+            ]
+        },
+        {
+            "id": "task1355-4950d7dc770c4af9b61f41a013fe8fad",
+            "input": "The state police have launched a new facility for submitting RTI applications online.",
+            "output": [
+                "The police have launched a facility for submitting RTI applications online."
+            ]
+        },
+        {
+            "id": "task1355-bd94b4afb763406dbd7b88f2924d64ea",
+            "input": "The government is to look at fresh ways to boost demand for the Green Deal, in what will be seen as a tacit admission that the flagship energy efficiency scheme is struggling.",
+            "output": [
+                "The government is to look at ways to boost demand for the Green Deal."
+            ]
+        },
+        {
+            "id": "task1355-f41395a9de7e41c5a4a6724b22108af4",
+            "input": "Jeff Pendergraph is changing his last name to Ayres as he begins a two-year contract with the San Antonio Spurs.",
+            "output": [
+                "Jeff Pendergraph is changing his last name to Ayres."
+            ]
+        },
+        {
+            "id": "task1355-9269581007df4de091b19f8022eca96f",
+            "input": "The Bathinda police on Friday foiled students' plan to stage a protest and block road by cordoning off the Punjabi University Regional Centre campus where students had gathered.",
+            "output": [
+                "The police foiled students ' plan to stage and block road."
+            ]
+        },
+        {
+            "id": "task1355-209dcb36eb3d41f9b01d9718101f66b2",
+            "input": "Syrian President Bashar al-Assad said on Thursday that Syria would defend itself against any aggression following reports that the United States and its allies were preparing military action in response to an alleged chemical weapons attack.",
+            "output": [
+                "Bashar al-Assad said Syria would defend itself against any aggression."
+            ]
+        },
+        {
+            "id": "task1355-fa5ba102b25a4769ae6ce7c5e2326ed8",
+            "input": "The man accused of killing 16-year-old Phylicia Barnes will be back in court Monday afternoon after a judge threw out his murder conviction.",
+            "output": [
+                "The man accused of killing Phylicia Barnes will be back in court."
+            ]
+        },
+        {
+            "id": "task1355-ff7b1c5c083c4d41b23f28b41fc12000",
+            "input": "A Charlottesville man was charged Friday by University of Virginia police in a New Year's Day rape.",
+            "output": [
+                "A Charlottesville man was charged in a New Year's Day rape."
+            ]
+        },
+        {
+            "id": "task1355-4dee7f26248349b1a494a9898db2ab5c",
+            "input": "Popular sandwich chain, Subway has announced that it plans on removing a chemical ingredient from its bread.",
+            "output": [
+                "Subway plans on removing a chemical ingredient from its bread."
+            ]
+        },
+        {
+            "id": "task1355-43634fa9c07a4727a5b8e2490b3c9c5d",
+            "input": "In a landmark judgement, a Malaysian court on Monday in Kuala Lumpur ruled that non-Muslims cannot use the word ``Allah'' to refer to God and prohibited a Christian newspaper from using it in the Muslim-majority nation.",
+            "output": [
+                "Non-Muslims can not use the word Allah."
+            ]
+        },
+        {
+            "id": "task1355-75665f2b465c41c48cf57410f2b369d3",
+            "input": "The Supreme Court on Tuesday exempted Tamil Nadu Chief Minister Jayalalithaa from personal appearance in a trial court in Bangalore scheduled for Wednesday in the disproportionate assets case because of the ongoing Assembly session.",
+            "output": [
+                "The Supreme Court exempted Jayalalithaa from appearance."
+            ]
+        },
+        {
+            "id": "task1355-98b3a94f76de49b4902f065528bb9ea9",
+            "input": "Kerala Chief Minister Oommen Chandy on Friday promised all help to endosulfan victims who have not got benefits from different schemes implemented by the government.",
+            "output": [
+                "Oommen Chandy promised help to endosulfan victims."
+            ]
+        },
+        {
+            "id": "task1355-97a48f6eb2464cfc98a7321157464562",
+            "input": "Even though it doesn't feel like it, the first day of spring is finally here.",
+            "output": [
+                "The first day of spring is here."
+            ]
+        },
+        {
+            "id": "task1355-ac45be708db44ec2bfb953d0a3b3feee",
+            "input": "A Harbourville man will stand trial next year on sex related charges involving an underage girl.",
+            "output": [
+                "A Harbourville man will stand trial on sex related charges."
+            ]
+        },
+        {
+            "id": "task1355-4123892cd0ce4179bbbab73173b6f4ae",
+            "input": "A 22-year-old Denham Springs woman died of an apparent heroin overdose while sitting in her car in the Wal-Mart parking lot late Monday night, Police Chief Scott Jones said Tuesday evening.",
+            "output": [
+                "A Denham Springs woman died of an apparent heroin overdose."
+            ]
+        },
+        {
+            "id": "task1355-5defbf43626747ef81e541f58215fc1f",
+            "input": "Lady Gaga accused notorious US gossip blogger Perez Hilton of trying to stalk her yesterday in a tweet that has since been deleted.",
+            "output": [
+                "Lady Gaga accused Perez Hilton of trying to stalk her."
+            ]
+        },
+        {
+            "id": "task1355-c0e6a60e2e854724a020659c750180b8",
+            "input": "Mickey Rooney died yesterday age 93 at his home in Studio City, California plunging the world of Hollywood into mourning.",
+            "output": [
+                "Mickey Rooney died yesterday age 93."
+            ]
+        },
+        {
+            "id": "task1355-21b2bef9c36c4b41b939839ba3c92810",
+            "input": "Nigeria at 100 should be celebrated for the fact of the date and not because of the performance leading to all round development of the country.",
+            "output": [
+                "Nigeria at 100 should be celebrated."
+            ]
+        },
+        {
+            "id": "task1355-cefc92d9fa294f5d96e897a9c1b6b0ff",
+            "input": "Fleet town centre continues to top the antisocial behaviour league table for Hart district.",
+            "output": [
+                "Fleet town centre continues to top the antisocial behaviour league table."
+            ]
+        },
+        {
+            "id": "task1355-2753d232ed3f4ca18ade166bb836c8ed",
+            "input": "Bella Thorne worked the red carpet yesterday looking super cute in a monochrome dress.",
+            "output": [
+                "Bella Thorne worked the red carpet looking cute in a monochrome dress."
+            ]
+        },
+        {
+            "id": "task1355-09ccf499813946a8b9ba21dce9745c15",
+            "input": "A longtime friend of Carolyn Cassady has confirmed the writer who was the former wife of Beatnik Neal Cassady and lover of Jack Kerouac has died.",
+            "output": [
+                "A friend of Carolyn Cassady has confirmed the writer has died."
+            ]
+        },
+        {
+            "id": "task1355-6e2401212e9c40adb68c266bdca4b7e7",
+            "input": "NBA star, LeBron James has praised NFL draft prospect Johnny Manziel after his pro day at Texas A&M today.",
+            "output": [
+                "Star, LeBron James has praised Johnny Manziel after his pro day."
+            ]
+        },
+        {
+            "id": "task1355-fa1cca216ff7400092c985d082f8a8a0",
+            "input": "New pledges for foreign direct investment in South Korea dropped in 2013 from a year earlier, affected by a significant pullback by Japan, the Ministry of Trade, Industry and Energy said Tuesday.",
+            "output": [
+                "Pledges for foreign direct investment in South Korea dropped in 2013."
+            ]
+        },
+        {
+            "id": "task1355-938078134f7c464fbb868d66d4acb56d",
+            "input": "The World famous Santoor player, Pandit Shiv Kumar Sharma, Pakistani singer Abida Parveen, Watali Brother and Sabri Brothers will be performing during the 'Jammu festival', which will begun from December 25 in winter capital of Jammu and Kashmir.",
+            "output": [
+                "The player, Pandit Shiv Kumar Sharma, Abida Parveen, will be performing during the Jammu festival."
+            ]
+        },
+        {
+            "id": "task1355-05197d383c684e6e94d2f53040bcf1ae",
+            "input": "A U-Haul packed with at least 71 undocumented immigrants was discovered by law enforcement officers in South Texas.",
+            "output": [
+                "A U-Haul packed with at least 71 undocumented immigrants was discovered in South Texas."
+            ]
+        },
+        {
+            "id": "task1355-9a1aeb13e11d495e9defa835bfbf45c4",
+            "input": "Police said DNA on a baseball cap led to the arrest of a man in a home invasion last summer.",
+            "output": [
+                "DNA on a baseball cap led to the arrest in a home invasion."
+            ]
+        }
+       ],
+    "Instance License": [
+        "Unknown"
+    ]
+}
