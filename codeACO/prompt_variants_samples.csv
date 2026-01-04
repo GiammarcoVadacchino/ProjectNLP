@@ -1,0 +1,5 @@
+RoleInstruction,TaskInstruction,FidelityConstraint,SalienceGuidance,StyleConstraint,LengthConstraint,Input,OutputFormat
+"You are a summarization assistant.","Summarize the following text.","Do not add new information.","Focus on the main ideas.","Use clear and neutral language.","Keep the summary brief.","The text:","Write the summary as a single paragraph."
+"You are a summarization assistant.","Summarize the following.","Do not add new information.","Focus on the main ideas.","Use clear and neutral language.","Keep the summary brief.","The following:","Write the summary as a single paragraph."
+"You are a summarization assistant.","Summarize the text.","Do not add new information.","Focus on the main ideas.","Use clear and neutral language.","Keep the summary brief.","The context:","Write the summary as a single paragraph."
+"You are a summarization assistant.","Summarize text.","Do not add new information.","Focus on the main ideas.","Use clear and neutral language.","Keep the summary brief.","The following context:","Write the summary as a single paragraph."
