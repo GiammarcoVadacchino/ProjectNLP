@@ -8,7 +8,6 @@ from transformers import (
 from tqdm import tqdm
 from rouge_score import rouge_scorer
 import numpy as np
-import os
 import csv
 
 #used for splitting the text in word or phrase in an automatic way, used in the computation of faithfulness
@@ -28,15 +27,15 @@ class PromptEvaluator:
         #the faithfulness measure how the summary generated respect the input text
         #measure if the model invents or not new informations that are not in the input text
         #It capture hallucinations of the model
-        self.nli_tokenizer = AutoTokenizer.from_pretrained( "valhalla/distilbart-mnli-12-1" ) 
-        self.nli_model = AutoModelForSequenceClassification.from_pretrained( "valhalla/distilbart-mnli-12-1" ).to(device) #model used to calculate the faithfulness beetween the summary generated and the input text
+        self.nli_tokenizer = AutoTokenizer.from_pretrained("valhalla/distilbart-mnli-12-1") 
+        self.nli_model = AutoModelForSequenceClassification.from_pretrained("valhalla/distilbart-mnli-12-1").to(device) #model used to calculate the faithfulness beetween the summary generated and the input text
 
         
         #the relevence measure how much the generated summary is relevent respect of the input text
         #it capture if the summary captures the principle information of the input text and drops meanless information
         #the aim is to understand if the model generates a summary usefull and informative, without distraction or irrilevant informations
         self.emb_tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
-        self.emb_model = AutoModel.from_pretrained( "sentence-transformers/paraphrase-MiniLM-L6-v2").to(device) #embedding model used to calculate the relevance beetween the summary generated and the input text
+        self.emb_model = AutoModel.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2").to(device) #embedding model used to calculate the relevance beetween the summary generated and the input text
 
 
 
@@ -76,7 +75,8 @@ class PromptEvaluator:
                     **inputs,
                     max_new_tokens=128,
                     do_sample = True,
-                    temperature=0.3
+                    temperature = 0.3,
+                    top_p=0.9
                 )
 
             #given the summary generated, decodes to have words and not tokens
@@ -113,14 +113,8 @@ class PromptEvaluator:
                     f"{np.mean(rogue_scores):.3f} ± {np.std(rogue_scores):.3f}",
                 ])
             return
-        else:
-            avg_fitness = sum(fitness_scores) / len(fitness_scores) #calculate the avg fitness among all the documents
-            avg_faithfulness = sum(faithfulness_scores) / len(faithfulness_scores) #calculate the avg faithfulness among all the documents
-            avg_relevance = sum(relevance_scores) / len(relevance_scores) #calculate the avg relevance among all the documents
-            avg_rogue = sum(rogue_scores) / len(rogue_scores) #calculate the avg rouge among all the documents
-            print(f"\n=== Evaluation completed - Average fitness: {avg_fitness:.3f} ===")
-
-        return avg_fitness,avg_faithfulness,avg_relevance,avg_rogue
+        
+        return fitness_scores,faithfulness_scores,relevance_scores,rogue_scores
 
 
 
@@ -253,12 +247,12 @@ class PromptEvaluator:
         return score
 
 
-    def fitness_function(self, faithfulness, relevance, coherence):
+    def fitness_function(self, faithfulness, relevance, rogue):
 
         #given the three metrics calculate a fitness value, in this case a weighted sum of the metrics
         
         return (
             0.5 * faithfulness +
             0.2 * relevance +
-            0.3 * coherence
+            0.3 * rogue
         )

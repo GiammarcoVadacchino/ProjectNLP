@@ -86,8 +86,6 @@ class PromptACO:
             scores.append(tau ** self.alpha)
 
         total = sum(scores)
-        if total == 0:
-            return random.choice(candidates)
         
         #calculate probability ditribution using the scores
         probs = [s / total for s in scores]
@@ -124,39 +122,51 @@ class PromptACO:
     def run(self):
         
         global_best_path = None #Prompt (so a path) with the highest fitness in the iteration
-        global_best_fitness = -math.inf #best fitness value
+        max_fitness_value = -math.inf
+        paths = [] #Paths of the ants
+        global_best_rouge = []
+        global_best_relevance = []        
+        global_best_faithfulness = []
+
+
 
         #Iterate over the iterations
         for iteration in range(self.iterations):
 
             paths = [] #Paths of the ants
-            fitness_values = [] #fitness over iterations
-            faithfulness_values = [] #faithfulness over iterations
-            relevance_values = [] #relevance over iterations
-            rouge_values = [] #rouge over iterations
+            global_best_rouge = []
+            global_best_relevance = []        
+            global_best_faithfulness = []
+
 
             #Iterate over the ants
             for _ in range(self.n_ants):
                 path_sampled = self.sample_prompt() #cross the DAG and build a path (so a list of the part of a prompt)
                 print(f"Initial Prompt:\n {self.serialize(path_sampled)}")
                 
-                avg_fitness,avg_faith,avg_rel,avg_rouge = self.evaluator.evaluatePrompt(path_sampled) #evaluate the prompt
+                fitness,faith,rel,rouge = self.evaluator.evaluatePrompt(path_sampled) #evaluate the prompt
 
+
+
+                avg_fitness = np.mean(fitness)
                 paths.append((path_sampled,avg_fitness))
-                fitness_values.append(avg_fitness)
-                faithfulness_values.append(avg_faith)
-                relevance_values.append(avg_rel)
-                rouge_values.append(avg_rouge)
+
 
                 #If we found a path with a better global avg fitness,then save the prompt and the its fitness value
-                if avg_fitness > global_best_fitness:
-                    global_best_fitness = avg_fitness
+                if avg_fitness > max_fitness_value:
+                    max_fitness_value = avg_fitness
                     global_best_path = path_sampled
+                    global_best_rouge = rouge
+                    global_best_relevance = rel
+                    global_best_faithfulness = faith
+
+                print(f"\n=== Evaluation completed - Average fitness: {avg_fitness:.3f} ===")
+
+            
 
             #Logging stats over iterations
             best_path, best_fit = max(paths, key=lambda x: x[1])
             worst_path, worst_fit = min(paths, key=lambda x: x[1])
-            mean_fit = sum(fitness_values) / len(fitness_values)
 
 
             #Add logging history
@@ -169,10 +179,9 @@ class PromptACO:
                 "best_fitness": f"{best_fit:.3f}",
                 "worst_prompt": " ".join(" ".join(node.text.split()) for node in worst_path),
                 "worst_fitness": f"{worst_fit:.3f}",
-                "mean_fitness": f"{mean_fit:.3f}",
-                "faith": f"{np.mean(faithfulness_values):.3f} ± {np.std(faithfulness_values):.3f}",
-                "relevance": f"{np.mean(relevance_values):.3f} ± {np.std(relevance_values):.3f}",
-                "rogue": f"{np.mean(rouge_values):.3f} ± {np.std(rouge_values):.3f}"
+                "faith": f"{np.mean(global_best_faithfulness):.3f} ± {np.std(global_best_faithfulness):.3f}",
+                "relevance": f"{np.mean(global_best_relevance):.3f} ± {np.std(global_best_relevance):.3f}",
+                "rogue": f"{np.mean(global_best_rouge):.3f} ± {np.std(global_best_rouge):.3f}"
             })
 
             #Evaporation of the pheromones after each iteration
@@ -185,7 +194,9 @@ class PromptACO:
             #if the value is higher, it means that the pheromones are equally distributed among the nodes of a certain level, so it means that all have the same importance in the prompt
             self.compute_level_entropies() #compute the entropy after each iteration, this tell how much a level is important in the DAG
 
-        return global_best_path, global_best_fitness
+            max_fitness_value = -math.inf #NOTE: need that because i want to log the best prompt for each iteration even if is worse than the previous iterations
+
+        return global_best_path, max_fitness_value
 
 
         
