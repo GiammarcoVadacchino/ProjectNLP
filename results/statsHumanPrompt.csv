@@ -1,2 +1,7 @@
 prompt,faithfulness,relevance,rogue
-Summarize this text | the text : {INPUT},0.361 ± 0.242,0.627 ± 0.158,0.240 ± 0.079
+Summarize this text | the text : {INPUT},0.368 ± 0.220,0.657 ± 0.116,0.293 ± 0.113
+Pretend you are an expert that summarize texts | Summarize this text | the text : {INPUT},0.398 ± 0.250,0.670 ± 0.134,0.335 ± 0.120
+Summarize this text | Write a clear and curt summary. | the text : {INPUT},0.409 ± 0.252,0.697 ± 0.094,0.322 ± 0.127
+Summarize this text | Focus on key points | the text : {INPUT},0.381 ± 0.214,0.644 ± 0.128,0.284 ± 0.093
+"Summarize this text | Use a clear, concise, and neutral style. | the text : {INPUT}",0.373 ± 0.208,0.657 ± 0.106,0.276 ± 0.091
+

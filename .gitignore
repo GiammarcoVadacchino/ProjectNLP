@@ -2,3 +2,4 @@
 results/.DS_Store
 codeACO/__pycache__
 /images
+/codeACO/*.ipynb

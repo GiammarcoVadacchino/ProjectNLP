@@ -1,0 +1,31 @@
+prompt,faithfulness,relevance,rouge,human,strategy,level_names
+Summarize this text | the text : {INPUT},0.368 ± 0.220,0.657 ± 0.116,0.293 ± 0.113,true,None,TaskInstruction Input
+Produce a concise summary of the content. The passage below: {INPUT},0.407 ± 0.220,0.663 ± 0.139,0.325 ± 0.157,false,Basic ACO,TaskInstruction Input
+Generate a concise summary of the given text. The text provided below: {INPUT},0.408 ± 0.238,0.681 ± 0.092,0.311 ± 0.100,false,EAS,TaskInstruction Input
+Summarize this text. The passage below: {INPUT},0.400 ± 0.222,0.706 ± 0.098,0.324 ± 0.091,false,Rank,TaskInstruction Input
+Summarize this text. The text provided below: {INPUT},0.392 ± 0.231,0.716 ± 0.091,0.349 ± 0.139,false,MMAS,TaskInstruction Input
+Provide a summary of the text below. The content is: {INPUT},0.396 ± 0.226,0.674 ± 0.104,0.312 ± 0.088,false,BWAS,TaskInstruction Input
+Pretend you are an expert that summarize texts | Summarize this text | the text : {INPUT},0.398 ± 0.250,0.670 ± 0.134,0.335 ± 0.120,true,None,RoleInstruction TaskInstruction Input
+Assume the perspective of a professional text summarizer. Produce a short summary of the provided text. the text: {INPUT},0.403 ± 0.231,0.694 ± 0.122,0.334 ± 0.100,false,Basic ACO,RoleInstruction TaskInstruction Input
+Respond as an authority in summarizing written material. Reduce the following text to a summary. The following content: {INPUT},0.402 ± 0.244,0.677 ± 0.114,0.307 ± 0.142,false,EAS,RoleInstruction TaskInstruction Input
+Assume the perspective of a professional text summarizer. Produce a short summary of the provided text. The content below: {INPUT},0.371 ± 0.228,0.724 ± 0.088,0.341 ± 0.102,false,Rank,RoleInstruction TaskInstruction Input
+Act as an analyst skilled in summarizing complex texts. Write a concise overview of the text. The following document: {INPUT},0.421 ± 0.246,0.675 ± 0.122,0.301 ± 0.155,false,MMAS,RoleInstruction TaskInstruction Input
+Assume the perspective of a professional text summarizer. Produce a short summary of the provided text. The content is: {INPUT},0.414 ± 0.242,0.669 ± 0.106,0.310 ± 0.096,false,BWAS,RoleInstruction TaskInstruction Input
+Summarize this text | Write a clear and curt summary. | the text : {INPUT},0.409 ± 0.252,0.697 ± 0.094,0.322 ± 0.127,true,None,TaskInstruction FidelityConstraint Input
+Produce a concise summary of the content. Preserve the original meaning. The input text below: {INPUT},0.384 ± 0.206,0.704 ± 0.070,0.343 ± 0.085,false,Basic ACO,TaskInstruction FidelityConstraint Input
+Generate a brief overview of the following text. Keep all information faithful to the text. the text: {INPUT},0.411 ± 0.243,0.680 ± 0.072,0.316 ± 0.108,false,EAS,TaskInstruction FidelityConstraint Input
+Provide a summary of the text below. Remain faithful to the source content. The text provided below: {INPUT},0.404 ± 0.242,0.698 ± 0.085,0.330 ± 0.104,false,Rank,TaskInstruction FidelityConstraint Input
+Provide a summary of the text below. Remain faithful to the source content. The text provided below: {INPUT},0.401 ± 0.238,0.673 ± 0.100,0.321 ± 0.098,false,MMAS,TaskInstruction FidelityConstraint Input
+Create a summary of the text below. Do not deviate from the source meaning. The document provided: {INPUT},0.393 ± 0.242,0.708 ± 0.076,0.330 ± 0.102,false,BWAS,TaskInstruction FidelityConstraint Input
+Summarize this text | Focus on key points | the text : {INPUT},0.381 ± 0.214,0.644 ± 0.128,0.284 ± 0.093,true,None,TaskInstruction SalienceGuidance Input
+Provide a summary of the text below. Highlight the key concepts. The following content: {INPUT},0.406 ± 0.233,0.701 ± 0.097,0.313 ± 0.145,false,Basic ACO,TaskInstruction SalienceGuidance Input
+Write a concise overview of the text. Focus on the most significant points. The document below is: {INPUT},0.407 ± 0.241,0.705 ± 0.076,0.335 ± 0.090,false,EAS,TaskInstruction SalienceGuidance Input
+Create a summary of the text below. Highlight the most important information. The following document: {INPUT},0.399 ± 0.221,0.680 ± 0.105,0.284 ± 0.101,false,Rank,TaskInstruction SalienceGuidance Input
+Reduce the following text to a summary. Capture the essential ideas. The content below: {INPUT},0.422 ± 0.257,0.656 ± 0.129,0.298 ± 0.104,false,MMAS,TaskInstruction SalienceGuidance Input
+Create a summary of the text below. Emphasize the primary themes. The document provided: {INPUT},0.393 ± 0.235,0.693 ± 0.103,0.320 ± 0.103,false,BWAS,TaskInstruction SalienceGuidance Input
+"Summarize this text | Use a clear, concise, and neutral style. | the text : {INPUT}",0.373 ± 0.208,0.657 ± 0.106,0.276 ± 0.091,true,None,TaskInstruction StyleConstraint Input
+Produce a concise summary of the content. Use a clear neutral style. The input text below: {INPUT},0.394 ± 0.228,0.685 ± 0.087,0.333 ± 0.105,false,Basic ACO,TaskInstruction StyleConstraint Input
+Write a concise overview of the text. Use formal and clear language. The following content: {INPUT},0.406 ± 0.228,0.696 ± 0.094,0.313 ± 0.145,false,EAS,TaskInstruction StyleConstraint Input
+Create a summary of the text below. Maintain a clear and neutral tone. The following document: {INPUT},0.402 ± 0.241,0.705 ± 0.093,0.334 ± 0.105,false,Rank,TaskInstruction StyleConstraint Input
+Write a summary of the content below. Use straightforward and neutral wording. The following content: {INPUT},0.430 ± 0.267,0.654 ± 0.099,0.294 ± 0.117,false,MMAS,TaskInstruction StyleConstraint Input
+Generate a brief overview of the following text. Use formal and clear language. The content below: {INPUT},0.388 ± 0.224,0.705 ± 0.063,0.340 ± 0.113,false,BWAS,TaskInstruction StyleConstraint Input
