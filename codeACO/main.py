@@ -10,10 +10,11 @@ import time
 
 DEVICE = "mps"
 MODEL_NAME = "t5-base"
+HUMAN_PROMPT = True
+SEED = 40
+
 model = T5ForConditionalGeneration.from_pretrained(MODEL_NAME).to(DEVICE)
 tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
-HUMAN_PROMPT = False
-
 
 """
 PART OF A PROMPT:
@@ -37,12 +38,13 @@ def build_dataset(
     target_tokens=350,
     tolerance=20,
     train_fraction=0.8,
-    seed=40
+    seed=SEED
 ):
     dataset = Dataset(
         csv_path=csv_path,
         input_col=input_col,
         output_col=output_col,
+        model_name=MODEL_NAME
     )
 
     dataset.load_with_token_limit(
@@ -53,8 +55,8 @@ def build_dataset(
 
     dataset.split_train_test(
         train_fraction=train_fraction,
-        shuffle=True,
-        seed=seed
+        seed=seed,
+        shuffle=True
     )
 
     return dataset
@@ -92,24 +94,17 @@ def run_experiment(
     nodes_per_level,
     model,
     tokenizer,
-    dataset_csv,
-    results_csv,
-    seed,
+    dataset,               # <-- dataset già costruito
     strategyACO,
     strategy_name,
     n_ants=4,
     iterations=4,
-    alpha=2,
+    alpha=1,
     evaporation_rate=0.2
 ):
-    random.seed(seed)
+    random.seed(SEED)
 
-    dataset = build_dataset(
-        csv_path=dataset_csv,
-        input_col="article",
-        output_col="highlights"
-    )
-
+    # Usa direttamente il dataset passato come input
     dag = build_prompt_dag(
         levels=levels,
         base_texts=base_texts,
@@ -136,61 +131,85 @@ def run_experiment(
     )
 
     best_prompt, best_score = aco.run()
-    aco.save_history_to_csv(file_path=results_csv)
+    aco.save_history_to_csv(file_path="../results/statsACO.csv")  # percorso fisso o parametrizzabile
 
     return best_prompt, best_score, aco.history
 
 
 EXPERIMENTS = [
     {
-        "levels": ["TaskInstruction", "Input"],
+        "levels": ["TaskInstruction","StyleConstraint","Input"],
         "base_texts": [
             "Summarize this text.",
+            "Use a clear, concise, and neutral style.",
             "the text:"
         ],
-        "nodes_per_level": (15, 15),
+        "nodes_per_level": (15,15, 15),
+        "strategy": StrategyACO(),
+        "strategy_name": "Basic ACO"
+    },
+    {
+        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "base_texts": [
+            "Summarize this text.",
+            "Use a clear, concise, and neutral style.",
+            "the text:"
+        ],
+        "nodes_per_level": (15,15, 15),
         "strategy": StrategyACO(),
         "strategy_name": "EAS"
     },
     {
-        "levels": ["TaskInstruction", "Input"],
+        "levels": ["TaskInstruction","StyleConstraint","Input"],
         "base_texts": [
             "Summarize this text.",
+            "Use a clear, concise, and neutral style.",
             "the text:"
         ],
-        "nodes_per_level": (15, 15),
+        "nodes_per_level": (15,15, 15),
         "strategy": StrategyACO(),
         "strategy_name": "Rank"
     },
     {
-        "levels": ["TaskInstruction", "Input"],
+        "levels": ["TaskInstruction","StyleConstraint","Input"],
         "base_texts": [
             "Summarize this text.",
+            "Use a clear, concise, and neutral style.",
             "the text:"
         ],
-        "nodes_per_level": (15, 15),
+        "nodes_per_level": (15,15, 15),
         "strategy": StrategyACO(),
         "strategy_name": "MMAS"
     },
     {
-        "levels": ["TaskInstruction", "Input"],
+        "levels": ["TaskInstruction","StyleConstraint","Input"],
         "base_texts": [
             "Summarize this text.",
+            "Use a clear, concise, and neutral style.",
             "the text:"
         ],
-        "nodes_per_level": (15, 15),
+        "nodes_per_level": (15,15, 15),
         "strategy": StrategyACO(),
         "strategy_name": "BWAS"
-    }
+    },
 ]
 
 
 def main():
-    begin = time.time()
-    base_seed = 40
+    # Costruisci il dataset **una sola volta** con seed fissato
+    random.seed(SEED)
+    dataset = build_dataset(
+        csv_path="../data/test.csv",
+        input_col="article",
+        output_col="highlights",
+        seed=SEED
+    )
 
     if not HUMAN_PROMPT:
         for idx, exp in enumerate(EXPERIMENTS):
+
+            begin = time.time()
+
             print(f"\nRunning experiment {idx + 1}/{len(EXPERIMENTS)}")
             print("Levels:", exp["levels"])
             print("Nodes per level:", exp["nodes_per_level"])
@@ -202,21 +221,22 @@ def main():
                 nodes_per_level=exp["nodes_per_level"],
                 model=model,
                 tokenizer=tokenizer,
-                dataset_csv="../data/test.csv",
-                results_csv="../results/statsACO.csv",
-                seed=base_seed,
+                dataset=dataset,                  # <-- passa il dataset già costruito
                 strategyACO=exp["strategy"],
                 strategy_name=exp["strategy_name"]
             )
 
-        print(f"\nTOTAL TIME TAKEN: {time.time() - begin} secs")
+            print(f"\nTOTAL TIME TAKEN: {time.time() - begin} secs ==========================================================")
+
     else:
-
-        prompt = "Summarize this text\nthe text : {INPUT}"
-        dataset = build_dataset(csv_path="../data/test.csv",input_col="article",output_col="highlights")
-        promptEvaluator = PromptEvaluator(model=model,tokenizer=tokenizer,dataset=dataset.train_pairs)
-        promptEvaluator.evaluatePrompt(prompt=prompt,humanPrompt=HUMAN_PROMPT,humanPromptcsvPath="../results/statsHumanPrompt.csv")
-
+        prompt = "Summarize this text\nWrite a clear and curt summary.\nthe text : {INPUT}"
+        # Riutilizza lo stesso dataset già costruito
+        promptEvaluator = PromptEvaluator(model=model, tokenizer=tokenizer, dataset=dataset.train_pairs)
+        promptEvaluator.evaluatePrompt(
+            prompt=prompt,
+            humanPrompt=HUMAN_PROMPT,
+            humanPromptcsvPath="../results/statsHumanPrompt.csv"
+        )
 
 
 if __name__ == "__main__":

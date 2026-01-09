@@ -15,7 +15,7 @@ class Dataset:
         csv_path: str,
         input_col: str,
         output_col: str,
-        model_name: str = "google/flan-t5-small",
+        model_name: str,
     ):
         self.csv_path = csv_path #csv file that contains the dataset
         self.input_col = input_col #col of the input document
@@ -39,7 +39,7 @@ class Dataset:
         Load examples whose input length is within target_tokens ± tolerance.
         """
 
-        random.seed(40)
+        #random.seed(42)
 
         min_tokens = target_tokens - tolerance #min number of tokens that a document has to have for being considered
         max_tokens = target_tokens + tolerance #max number of tokens that a document has to have for being considered
@@ -64,9 +64,10 @@ class Dataset:
 
     def split_train_test(
         self,
-        train_fraction: float = 0.8,
+        train_fraction: float,
+        seed: int,
         shuffle: bool = True,
-        seed: int = 40,
+        
     ) -> None:
 
         assert 0.0 < train_fraction <= 1.0
