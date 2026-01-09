@@ -94,7 +94,7 @@ def run_experiment(
     nodes_per_level,
     model,
     tokenizer,
-    dataset,               # <-- dataset già costruito
+    dataset,              
     strategyACO,
     strategy_name,
     n_ants=4,
@@ -104,7 +104,6 @@ def run_experiment(
 ):
     random.seed(SEED)
 
-    # Usa direttamente il dataset passato come input
     dag = build_prompt_dag(
         levels=levels,
         base_texts=base_texts,
@@ -131,7 +130,7 @@ def run_experiment(
     )
 
     best_prompt, best_score = aco.run()
-    aco.save_history_to_csv(file_path="../results/statsACO.csv")  # percorso fisso o parametrizzabile
+    aco.save_history_to_csv(file_path="../results/statsACO.csv") 
 
     return best_prompt, best_score, aco.history
 
@@ -196,7 +195,6 @@ EXPERIMENTS = [
 
 
 def main():
-    # Costruisci il dataset **una sola volta** con seed fissato
     random.seed(SEED)
     dataset = build_dataset(
         csv_path="../data/test.csv",
@@ -221,7 +219,7 @@ def main():
                 nodes_per_level=exp["nodes_per_level"],
                 model=model,
                 tokenizer=tokenizer,
-                dataset=dataset,                  # <-- passa il dataset già costruito
+                dataset=dataset,                 
                 strategyACO=exp["strategy"],
                 strategy_name=exp["strategy_name"]
             )
@@ -230,7 +228,6 @@ def main():
 
     else:
         prompt = "Summarize this text\nWrite a clear and curt summary.\nthe text : {INPUT}"
-        # Riutilizza lo stesso dataset già costruito
         promptEvaluator = PromptEvaluator(model=model, tokenizer=tokenizer, dataset=dataset.train_pairs)
         promptEvaluator.evaluatePrompt(
             prompt=prompt,
