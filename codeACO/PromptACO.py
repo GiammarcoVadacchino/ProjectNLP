@@ -67,7 +67,11 @@ class PromptACO:
                     self.pheromones[key] = self.pheromones[key]  # force creation
 
 
-    def select_node(self, level_idx, prev_node):
+    def select_node(
+            self, 
+            level_idx, #level of the node
+            prev_node 
+        ):
         #given the level of a node, take all the nodes in that level
         candidates = self.dag.level_nodes[level_idx]
         scores = []
@@ -200,7 +204,10 @@ class PromptACO:
 
 
         
-    def serialize(self, path):
+    def serialize(
+            self, 
+            path # path that should be serialized
+        ):
         parts = []
 
         #Iterate over a path
@@ -211,10 +218,30 @@ class PromptACO:
         return "\n".join(parts) #return a textual prompt as a string
     
 
+    def save_history_to_csv(
+            self, 
+            file_path #path for logging
+        ):
 
+        #if no history logged
+        if not self.history:
+            raise ValueError("La history è vuota, niente da salvare.")
+
+        #Create the dir if no exists
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        #Get the coloumns of the csv
+        fieldnames = self.history[0].keys()
+
+        with open(file_path, mode="a", newline="", encoding="utf-8") as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer.writerows(self.history)
+
+    
+
+"""
     def compute_level_entropies(self):
  
-    
         level_entropies = {} # map that contains the entropy for each level of the DAG
         prev_nodes = [self.dag.start_node]  # initial node START
 
@@ -258,23 +285,8 @@ class PromptACO:
 
         return level_entropies
     
+"""
 
 
 
-
-    def save_history_to_csv(self, file_path):
-
-        #if no history logged
-        if not self.history:
-            raise ValueError("La history è vuota, niente da salvare.")
-
-        #Create the dir if no exists
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
-        #Get the coloumns of the csv
-        fieldnames = self.history[0].keys()
-
-        with open(file_path, mode="a", newline="", encoding="utf-8") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            writer.writerows(self.history)
 

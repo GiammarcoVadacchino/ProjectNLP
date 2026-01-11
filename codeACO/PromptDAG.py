@@ -18,7 +18,10 @@ class PromptDAG:
         self.start_node = PromptNode("START", optional=False) # start node, each ant starts in this node
         self.level_nodes: List[List[PromptNode]] = [] # adjaceny matrix used for graph rapresentation 
 
-    def initialize_levels(self, base_texts: List[str]):
+    def initialize_levels(
+            self,
+            base_texts: List[str] #Text for the initialized levels
+        ):
         
         #base_texts: one base phrase per level (same order as level_names)
         assert len(base_texts) == self.n_levels 
@@ -62,11 +65,11 @@ class PromptDAG:
 
     def generate_variants_for_initialized_levels(
         self,
-        path_csv: str,
-        nodes_per_level: List[int],
-        model,
-        tokenizer,
-        max_length: int = 64
+        path_csv: str, #csv file to save the variants
+        nodes_per_level: List[int], #size of each layer of the DAG
+        model, #model that generates the variants
+        tokenizer, #tokenizer for the prompt pharaphrasing
+        max_length: int = 64 #max lenght for the variants 
     ) -> Dict[str, List[str]]:
 
         #the length of the list that contains the number of nodes for each level has to be equal the number of the nodes
@@ -118,7 +121,7 @@ class PromptDAG:
 
     def load_variants_from_csv_for_initialized_levels(
         self,
-        path_csv: str
+        path_csv: str #csv file to load the variants
     ) -> Dict[str, List[str]]:
 
 
@@ -141,13 +144,13 @@ class PromptDAG:
 
     def prepare_variants(
         self,
-        load_variants: bool,
-        path_csv: str,
+        load_variants: bool, #decide if load or generate the variants of the base texts
+        path_csv: str, 
         nodes_per_level: List[int],
         model=None,
         tokenizer=None,
-        diversity_model_name: str = "all-MiniLM-L6-v2",
-        diversity_threshold: float = 0.85
+        diversity_model_name: str = "all-MiniLM-L6-v2", #model used for cosine similarity
+        diversity_threshold: float = 0.85 #treshold similarity
     ):
 
 
@@ -218,8 +221,8 @@ class PromptDAG:
     
     def check_diversity(
         self,
-        texts: List[str],
-        embeddings: np.ndarray,
+        texts: List[str], #variants
+        embeddings: np.ndarray, #embedding of the variants
         threshold: float
     ) -> List[str]:
 
@@ -260,7 +263,10 @@ class PromptDAG:
         print("\nEND\n")
 
 
-    def update_dag(self, variants: Dict[str, List[str]]):
+    def update_dag(
+        self, 
+        variants: Dict[str, List[str]] #map the variants for each level
+    ):
 
         #iterate over the DAG
         for level_idx, level_name in enumerate(self.level_names):

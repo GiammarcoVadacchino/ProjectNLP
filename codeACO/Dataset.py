@@ -64,9 +64,9 @@ class Dataset:
 
     def split_train_test(
         self,
-        train_fraction: float,
+        train_fraction: float, #split ratio
         seed: int,
-        shuffle: bool = True,
+        shuffle: bool = True, 
         
     ) -> None:
 

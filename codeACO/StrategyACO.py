@@ -6,7 +6,11 @@ class StrategyACO:
         pass
 
     @staticmethod
-    def update_pheromone_AS(dag,pheromones, paths):
+    def update_pheromone_AS(
+        dag, #graph
+        pheromones, #edges pheromones
+        paths #all paths that build a prompt in an iteration
+    ):
         """
         Classical Ant System: Increase pheromones of all the paths crossed
         """
