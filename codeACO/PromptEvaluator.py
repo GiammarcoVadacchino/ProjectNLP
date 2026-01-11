@@ -25,8 +25,7 @@ class PromptEvaluator:
 
         
         #the faithfulness measure how the summary generated respect the input text
-        #measure if the model invents or not new informations that are not in the input text
-        #It capture hallucinations of the model
+        #measure if the informations of the summary generated are supported by the gt summary or not
         self.nli_tokenizer = AutoTokenizer.from_pretrained("valhalla/distilbart-mnli-12-1") 
         self.nli_model = AutoModelForSequenceClassification.from_pretrained("valhalla/distilbart-mnli-12-1").to(device) #model used to calculate the faithfulness beetween the summary generated and the input text
 
