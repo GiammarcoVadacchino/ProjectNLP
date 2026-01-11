@@ -4,4 +4,5 @@ Pretend you are an expert that summarize texts | Summarize this text | the text 
 Summarize this text | Write a clear and curt summary. | the text : {INPUT},0.409 ± 0.252,0.697 ± 0.094,0.322 ± 0.127
 Summarize this text | Focus on key points | the text : {INPUT},0.381 ± 0.214,0.644 ± 0.128,0.284 ± 0.093
 "Summarize this text | Use a clear, concise, and neutral style. | the text : {INPUT}",0.373 ± 0.208,0.657 ± 0.106,0.276 ± 0.091
-
+Summarize this text | the text: {INPUT} | Limit the summary to a few sentences.,0.273 ± 0.233,0.561 ± 0.258,0.263 ± 0.169
+"Pretend you are an expert that summarize text | Summarize this text | Write a clear and curt summary | Focus on key points | Use a clear, concise, and neutral style | the text: {INPUT} | Limit the summary to a few sentences.",0.412 ± 0.248,0.696 ± 0.101,0.305 ± 0.108

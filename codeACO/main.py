@@ -10,7 +10,7 @@ import time
 
 DEVICE = "mps"
 MODEL_NAME = "t5-base"
-HUMAN_PROMPT = True
+HUMAN_PROMPT = False
 SEED = 40
 
 model = T5ForConditionalGeneration.from_pretrained(MODEL_NAME).to(DEVICE)
@@ -24,8 +24,8 @@ TaskInstruction,
 FidelityConstraint,
 SalienceGuidance,
 StyleConstraint,
-LengthConstraint,
 Input,
+LengthConstraint,
 OutputFormat
 """
 
@@ -137,60 +137,80 @@ def run_experiment(
 
 EXPERIMENTS = [
     {
-        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "levels": ["RoleInstruction","TaskInstruction","FidelityConstraint","SalienceGuidance","StyleConstrain","Input","LengthConstraint"],
         "base_texts": [
+            "Pretend you are an expert that summarize text",
             "Summarize this text.",
-            "Use a clear, concise, and neutral style.",
-            "the text:"
+            "Write a clear and curt summary",
+            "Focus on key points",
+            "Use a clear, concise, and neutral style",
+            "the text:",
+            "Limit the summary to a few sentences"
         ],
-        "nodes_per_level": (15,15, 15),
+        "nodes_per_level": (15,15, 15,15,15, 15,15),
         "strategy": StrategyACO(),
         "strategy_name": "Basic ACO"
     },
     {
-        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "levels": ["RoleInstruction","TaskInstruction","FidelityConstraint","SalienceGuidance","StyleConstrain","Input","LengthConstraint"],
         "base_texts": [
+            "Pretend you are an expert that summarize text",
             "Summarize this text.",
-            "Use a clear, concise, and neutral style.",
-            "the text:"
+            "Write a clear and curt summary",
+            "Focus on key points",
+            "Use a clear, concise, and neutral style",
+            "the text:",
+            "Limit the summary to a few sentences"
         ],
-        "nodes_per_level": (15,15, 15),
+        "nodes_per_level": (15,15, 15,15,15, 15,15),
         "strategy": StrategyACO(),
         "strategy_name": "EAS"
     },
     {
-        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "levels": ["RoleInstruction","TaskInstruction","FidelityConstraint","SalienceGuidance","StyleConstrain","Input","LengthConstraint"],
         "base_texts": [
+            "Pretend you are an expert that summarize text",
             "Summarize this text.",
-            "Use a clear, concise, and neutral style.",
-            "the text:"
+            "Write a clear and curt summary",
+            "Focus on key points",
+            "Use a clear, concise, and neutral style",
+            "the text:",
+            "Limit the summary to a few sentences"
         ],
-        "nodes_per_level": (15,15, 15),
+        "nodes_per_level": (15,15, 15,15,15, 15,15),
         "strategy": StrategyACO(),
         "strategy_name": "Rank"
     },
     {
-        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "levels": ["RoleInstruction","TaskInstruction","FidelityConstraint","SalienceGuidance","StyleConstrain","Input","LengthConstraint"],
         "base_texts": [
+            "Pretend you are an expert that summarize text",
             "Summarize this text.",
-            "Use a clear, concise, and neutral style.",
-            "the text:"
+            "Write a clear and curt summary",
+            "Focus on key points",
+            "Use a clear, concise, and neutral style",
+            "the text:",
+            "Limit the summary to a few sentences"
         ],
-        "nodes_per_level": (15,15, 15),
+        "nodes_per_level": (15,15, 15,15,15, 15,15),
         "strategy": StrategyACO(),
         "strategy_name": "MMAS"
     },
     {
-        "levels": ["TaskInstruction","StyleConstraint","Input"],
+        "levels": ["RoleInstruction","TaskInstruction","FidelityConstraint","SalienceGuidance","StyleConstrain","Input","LengthConstraint"],
         "base_texts": [
+            "Pretend you are an expert that summarize text",
             "Summarize this text.",
-            "Use a clear, concise, and neutral style.",
-            "the text:"
+            "Write a clear and curt summary",
+            "Focus on key points",
+            "Use a clear, concise, and neutral style",
+            "the text:",
+            "Limit the summary to a few sentences"
         ],
-        "nodes_per_level": (15,15, 15),
+        "nodes_per_level": (15,15, 15,15,15, 15,15),
         "strategy": StrategyACO(),
         "strategy_name": "BWAS"
-    },
+    }
 ]
 
 
@@ -227,7 +247,7 @@ def main():
             print(f"\nTOTAL TIME TAKEN: {time.time() - begin} secs ==========================================================")
 
     else:
-        prompt = "Summarize this text\nWrite a clear and curt summary.\nthe text : {INPUT}"
+        prompt = "Pretend you are an expert that summarize text\nSummarize this text\nWrite a clear and curt summary\nFocus on key points\nUse a clear, concise, and neutral style\nthe text: {INPUT}\nLimit the summary to a few sentences."
         promptEvaluator = PromptEvaluator(model=model, tokenizer=tokenizer, dataset=dataset.train_pairs)
         promptEvaluator.evaluatePrompt(
             prompt=prompt,

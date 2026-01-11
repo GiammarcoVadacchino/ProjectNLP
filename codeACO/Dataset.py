@@ -12,10 +12,10 @@ class Dataset:
 
     def __init__(
         self,
-        csv_path: str,
-        input_col: str,
-        output_col: str,
-        model_name: str,
+        csv_path: str, #data csv path
+        input_col: str, #input coloumn of the csv
+        output_col: str, #output coloumn of the csv
+        model_name: str, #tokenizer for sampling data
     ):
         self.csv_path = csv_path #csv file that contains the dataset
         self.input_col = input_col #col of the input document
@@ -31,9 +31,9 @@ class Dataset:
 
     def load_with_token_limit(
         self,
-        number_of_samples: int,
-        target_tokens: int,
-        tolerance: int = 20
+        number_of_samples: int, #number of samples for testing
+        target_tokens: int, #length in tokens for the inputs
+        tolerance: int = 20 #bounds
     ) -> None:
         """
         Load examples whose input length is within target_tokens ± tolerance.

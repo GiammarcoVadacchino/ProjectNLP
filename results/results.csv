@@ -29,3 +29,9 @@ Write a concise overview of the text. Use formal and clear language. The followi
 Create a summary of the text below. Maintain a clear and neutral tone. The following document: {INPUT},0.402 ± 0.241,0.705 ± 0.093,0.334 ± 0.105,false,Rank,TaskInstruction StyleConstraint Input
 Write a summary of the content below. Use straightforward and neutral wording. The following content: {INPUT},0.430 ± 0.267,0.654 ± 0.099,0.294 ± 0.117,false,MMAS,TaskInstruction StyleConstraint Input
 Generate a brief overview of the following text. Use formal and clear language. The content below: {INPUT},0.388 ± 0.224,0.705 ± 0.063,0.340 ± 0.113,false,BWAS,TaskInstruction StyleConstraint Input
+Summarize this text | the text: {INPUT} | Limit the summary to a few sentences.,0.273 ± 0.233,0.561 ± 0.258,0.263 ± 0.169,true,None,TaskInstruction Input LengthConstraint
+Provide a summary of the text below. The text provided below: {INPUT} Use a minimal number of sentences.,0.405 ± 0.247,0.675 ± 0.099,0.326 ± 0.103,false,Basic ACO,TaskInstruction Input LengthConstraint
+Write a concise overview of the text. The content is: {INPUT} Keep it short and to the point.,0.382 ± 0.219,0.680 ± 0.111,0.305 ± 0.104,false,EAS,TaskInstruction Input LengthConstraint
+Write a summary of the content below. The document below: {INPUT} Limit the summary size.,0.384 ± 0.226,0.684 ± 0.119,0.295 ± 0.108,false,Rank,TaskInstruction Input LengthConstraint
+Provide a summary of the text below. The document below: {INPUT} Limit the summary size.,0.374 ± 0.233,0.695 ± 0.095,0.319 ± 0.140,false,MMAS,TaskInstruction Input LengthConstraint
+Write a concise overview of the text. The document provided: {INPUT} Keep it concise.,0.398 ± 0.235,0.670 ± 0.128,0.315 ± 0.130,false,BWAS,TaskInstruction Input LengthConstraint
